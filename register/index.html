@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+	<title>صفحه شخصی </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<div class="topmenu">
+				<div class="container">
+					<div class="topPhoto">
+						<img src="images/parsa.jpg">
+					</div>
+					<div class="topmenuelements">
+						<a href="http://google.com" class="name"> پارسا مرسل </a>
+					</div>
+					<div class="topmenudate">
+						<a href="#">خروج</a>
+					</div>
+					<div class="logo"> <img src="images/logo.jpg"></div>
+				</div>
+			</div>
+		</div>
+		<div class="mainPage">
+			<div class="wrapper"></div>
+			<div class="formm">
+				<form>
+					<h2>مشخصات</h2>
+					<div class="controls">
+						<input type="text" id="name" class="floatlabel" placeholder="نام">
+					</div>
+
+					<div class="controls">
+						<input type="text" id="lastname" class="floatlabel" placeholder="نام خانوادگی">
+					</div>
+					
+					<div class="controls">
+						<input type="email" id="email" class="floatlabel" placeholder="ایمیل">
+					</div>
+					
+					<div class="controls">
+						<input type="tel" id="tel" class="floatlabel" placeholder="تلفن">
+					</div>
+					
+					<div class="controls">
+					<i class="ion-navicon"></i>
+					<select id="sex" class="floatlabel">
+						<option value="blank"> جنسیت </option>
+						<option value="male">مرد</option>
+						<option value="female">زن</option>
+						<option value="other">سایر</option>
+					</select>
+					</div>
+
+					<h2> توانایی‌ها </h2>
+					<div class="controlsAbility">
+						<input type="text" id="candidate" placeholder="توانایی" class="someClass">
+	    				<button id="add" onclick="addItem()">+</button>
+						<ul id="dynamiclist"></ul>
+						<br>
+					</div>
+
+					<h2> زمان‌بندی هفتگی</h2>
+					<table>
+						<thead>
+							<th></th>
+							<th> 8-10 </th>
+							<th> 10-12 </th>
+							<th> 12-15 </th>
+							<th> 15-17 </th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>شنبه</td>
+								<td> <button id="11"></button> </td>
+								<td> <button id="11"></button> </td>
+								<td> <button id="11"></button> </td>
+								<td> <button id="11"></button> </td>
+							</tr>
+							<tr>
+								<td>یکشنبه</td>
+								<td> <button id="11"></button> </td>
+								<td> <button id="11"></button> </td>
+								<td> <button id="11"></button> </td>
+								<td> <button id="11"></button> </td>
+							</tr>
+							<tr>
+								<td>دوشنبه</td>
+								<td>  </td>
+								<td>  </td>
+								<td>  </td>
+								<td>  </td>
+							</tr>
+							<tr>
+								<td>سه‌شنبه</td>
+								<td>  </td>
+								<td>  </td>
+								<td>  </td>
+								<td>  </td>
+							</tr>
+							<tr>
+								<td>چهارشنبه</td>
+								<td>  </td>
+								<td>  </td>
+								<td>  </td>
+								<td>  </td>
+							</tr>
+							<tr>
+								<td>پنجشنبه</td>
+								<td>  </td>
+								<td>  </td>
+								<td>  </td>
+								<td>  </td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<h2>بیشتر...</h2>
+					<div class="controls">
+					<textarea id="cm" class="floatlabel" placeholder="نظر شما"></textarea>
+					</div>
+					
+					<div class="controls">
+						<input type="checkbox" id="checkbox" class="checkbox">
+						<label for="checkbox"><span></span>قوانین را قبول دارم</label>
+					</div>
+					
+					<button>ثبت</button>
+				</form>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="addr">
+					<h4>بزگراه صدر، خیابان شهید نعمتی، کوچه هجدهم، پلاک ۶، واحد ۱۰ </h4>
+					<h4>تلفن: ۰۲۱۲۲۶۲۳۳۶۵</h4>
+				</div>
+			</div>
+			<div class="copy">
+				<h4>کپی‌رایت رعایت شود.</h4>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
