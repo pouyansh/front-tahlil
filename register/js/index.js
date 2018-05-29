@@ -1,23 +1,45 @@
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+
 function addItem(){
     var ul = document.getElementById("dynamiclist");
     var candidate = document.getElementById("candidate").value;
     var li = document.createElement("li");
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
     li.setAttribute('id',candidate);
     li.appendChild(document.createTextNode(candidate));
     ul.appendChild(li);
-    document.getElementById("candidate").value="";
+    
+    document.getElementById("candidate").value = "";
+
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+        }
+    }
+}
+
+function week(e) {
+    document.getElementById(e).style.backgroundColor = "rgb(57,183,250)";
 }
 
 function f() {
-	document.getElementById("add").addEventListener("click", function(event){
-	    event.preventDefault()
-	});
+    document.getElementById("add").addEventListener("click", function(event){
+        event.preventDefault()
+    });
 } 
 f();
-
-function removeItem(){
-    var ul = document.getElementById("dynamic-list");
-    var candidate = document.getElementById("candidate");
-    var item = document.getElementById(candidate.value);
-    ul.removeChild(item);
-}
