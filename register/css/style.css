@@ -216,6 +216,7 @@ h2{
 input[type=text],
 input[type=email],
 input[type=tel],
+input[type=number],
 select,textarea,button{
 	padding: 18px;
 	border: 1px solid #c6c6c6;
@@ -225,6 +226,16 @@ select,textarea,button{
 	border-radius: 3px;
 	text-align: right;
 }
+.educontrols {
+	text-align: right;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.educontrols input[type=text]{
+	display: none;
+}
+
 .label{
 	position: absolute;
 	top: 10px;
@@ -240,14 +251,24 @@ select,textarea,button{
 }
 .ion-navicon{
 	position: absolute;
-	left: 10px;
-	top: 14px;
-	color: #888
+	left: 15px;
+	top: 18px;
+	color: #444444;
+	z-index: 3;
 }
-select{
+select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 textarea{
@@ -363,6 +384,7 @@ table {
 	margin-bottom: 20px;
 	box-sizing: border-box;
 	border-collapse: collapse;
+	display: none;
 }
 
 .formm table tbody tr td {

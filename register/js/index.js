@@ -33,12 +33,33 @@ function addItem(){
     }
 }
 
+function eduChanged() {
+    var edu = document.getElementById("education");
+    if (edu.value == "blank" || edu.value == "nothing") {
+        document.getElementById("fieldOfEducation").style.display = "none";
+    } else {
+        document.getElementById("fieldOfEducation").style.display = "block";
+    }
+}
+
+function participation() {
+    var edu = document.getElementById("typeOfParticipation");
+    if (edu.value == "atHome" || edu.value == "blank") {
+        document.getElementById("tab").style.display = "none";
+    } else {
+        document.getElementById("tab").style.display = "block";
+    }
+}
+
 function week(e) {
     document.getElementById(e).style.backgroundColor = "rgb(57,183,250)";
 }
 
 function f() {
     document.getElementById("add").addEventListener("click", function(event){
+        event.preventDefault()
+    });
+    document.getElementById("education").addEventListener("change", function(event){
         event.preventDefault()
     });
 } 
