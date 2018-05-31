@@ -318,6 +318,14 @@ table {
 	margin-top: 20px;
 }
 
+#abilities span {
+	color: #f0f0f0;
+	width: 20%;
+	text-align: center;
+	background: rgba(0,0,0,0.4);
+	border-radius: 10px;
+}
+
 #weeklyfreetime {
 	margin-top: 20px;
 }

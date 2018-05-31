@@ -1,3 +1,38 @@
+var personalData = {
+    "name": "مهدیس تاجداری",
+    "age": "۲۰",
+    "edu": "دیپلم",
+    "fieldOfEdu": "ریاضی فیزیک",
+    "job": "دانشجو",
+    "email": "tajdari@ce.sharif.edu",
+    "photo": "images/mahdis.jpg"
+}
+var photo = document.getElementById("photo");
+var im = document.createElement('img');
+im.setAttribute('src',personalData.photo);
+photo.appendChild(im);
+
+var personal1 = document.getElementById("personal");
+var sname = document.createElement('h3');
+sname.innerHTML = "نام و نام خانوادگی: " + personalData.name;
+personal1.appendChild(sname);
+var sage = document.createElement('h3');
+sage.innerHTML = "سن: " + personalData.age;
+personal1.appendChild(sage);
+var sedu = document.createElement('h3');
+if (personalData.edu == "ندارد")
+    sedu.innerHTML = "تحصیلات: ندارد";
+else
+    sedu.innerHTML = "تحصیلات: " + personalData.edu + " (" + personalData.fieldOfEdu + ")";
+personal1.appendChild(sedu);
+var sjob = document.createElement('h3');
+sjob.innerHTML = "شغل: " + personalData.job;
+personal1.appendChild(sjob);
+var semail = document.createElement('h3');
+semail.innerHTML = "پست الکترونیک: " + personalData.email;
+personal1.appendChild(semail);
+
+
 //chart data
 var chartjson = {
   "data": [{
@@ -94,11 +129,11 @@ for (var i = 0; i < abilities.data.length; i++) {
     s.value = 1;
     s.onclick = function() {
         if (this.value == 1) {
-            this.style.color = "#3498db";
+            this.style.color = "orange";
             this.value = 2;
         }
         else {
-            this.style.color = "rgb(0,0,0)";
+            this.style.color = "#f0f0f0";
             this.value = 1;
         }
     }
@@ -135,7 +170,7 @@ for (var i = 0; i < 7; i++) {
             span.value = 1;
             span.onclick = function() {
                 if (this.value == 1) {
-                    this.style.backgroundColor = "rgb(57,183,250)";
+                    this.style.backgroundColor = "orange";
                     this.value = 2;
                 }
                 else {
