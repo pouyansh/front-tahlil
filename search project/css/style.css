@@ -1,0 +1,427 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	border: none;
+}
+
+@font-face{
+	font-family: 'vazir';
+	src:url("../fonts/Vazir-FD.woff")format("woff"),
+	url("../fonts/Vazir-FD.eot")format("eot"),
+	url("../fonts/Vazir-FD.ttf")format("truetype")
+}
+
+body {
+	font-family: 'vazir';
+}
+
+h2{
+	margin-bottom: 10px;
+	margin-top: 30px;
+}
+
+.main {
+	width: 100%;
+	float: right;
+	background: url('../images/back1.jpg') fixed no-repeat;
+	background-size: 1600px 1000px;
+	position: relative;
+	min-width: 300px;
+}
+
+.main .header {
+	width: 100%;
+	height: 60px;
+	color: #eeeeee;
+	float: right;
+	position: fixed;
+	min-width: 300px;
+	z-index: 6;
+}
+
+.header .topmenu {
+	width: 100%;
+	float: right;
+	background: #777777;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.header .topmenu .container {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.header .topmenu .container .topPhoto{
+	float: right;
+	width: 50px;
+	height: 50px;
+	margin: 5px 20px 5px 0px;
+	box-sizing: border-box;
+}
+
+.header .topmenu .container .topPhoto img{
+	float: right;
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.header .topmenu .container .topmenuelements {
+	float: right;
+	width: 80px;
+	margin: 15px 15px 0 0;
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+}	
+
+.header .topmenu .container .topmenuelements a {
+	font-family: 'vazir';
+	float: right;
+	width: auto;
+	min-width: 8%;
+	color: #aaaaaa;
+	border: none;
+	position: relative;
+	text-decoration: none;
+	display: inline-block;
+	margin-right: 2px;
+	box-sizing: border-box;
+}
+
+.header .topmenu .container .topmenuelements a:hover { 
+	color: rgb(55,204,253);
+}
+
+.header .topmenu .container .topmenudate a {
+	font-family: 'vazir';
+	float: right;
+	width: auto;
+	min-width: 8%;
+	color: #aaaaaa;
+	border: none;
+	text-decoration: none;
+	display: inline-block;
+	margin-right: 2px;
+	box-sizing: border-box;
+}
+
+.header .topmenu .container .topmenudate a:hover { 
+	color: rgb(55,204,253);
+}
+
+.header .topmenu .container .topmenudate {
+	font-family: 'vazir';
+	float: right;
+	margin-top: 15px;
+	margin-right: 10px;
+	position: relative;
+	color: #999999;
+	box-sizing: border-box;
+}
+
+.header .topmenu .container .logo {
+	float: left;
+	height: 60px;
+	width: 30%;
+	margin-left: 5px;
+	box-sizing: border-box;
+}
+
+.header .topmenu .container .logo img{
+	height: 100%;
+	float: left;
+	box-sizing: border-box;
+}
+
+.main .mainPage {
+	margin-top: 60px;
+	width: 100%;
+	min-height: 800px;
+	position: relative;
+	display: inline-block;
+	z-index: 2;
+}
+
+.main .mainPage .wrapper {
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,.6);
+	position: fixed;
+	z-index: 1;
+}
+
+.main .footer {
+	width: 100%;
+	float: right;
+	background: #777777;
+	position: relative;
+	bottom: 0;
+	z-index: 2;
+}
+
+.main .footer .container {
+	float: right;
+	width: 100%;
+}
+
+.main .footer .container .addr {
+	color: #eeeeee;
+	float: right;
+	display: block;
+	margin-right: 50px;
+}
+
+.main .footer .container .addr h4{
+	margin-top: 10px;
+}
+
+.main .footer .copy {
+	color: #dddddd;
+	margin: 10px auto;
+	text-align: center;
+	font-size: 12px;
+}
+
+.mainPage {
+	min-width: 820px;
+}
+
+.mainPage .container {
+	width: 80%;
+	z-index: 3;
+	box-sizing: border-box;
+	margin: 50px auto;
+	position: relative;
+}
+
+.controls{
+	text-align: center;
+	position: relative;
+	margin: 10px 10%;
+	display: inline-block;
+	width: 80%;
+	height: 50px;
+	font-size: 10px;
+}
+
+.controlsname{
+	text-align: center;
+	position: relative;
+	margin: 10px 2.5% 10px 2.5%;
+	display: inline-block;
+	width: 50%;
+	height: 50px;
+}
+
+.searchBar h4{
+	font-size: 10px;
+	display: inline-block;
+	width: 15%;
+	margin-top: 15px;
+}
+
+.searchBar select{
+	font-size: 12px;
+	width: 25%;
+	height: 100%;
+	color: #888;
+	margin: 8px 0;
+	background: #fdfdfd;
+	font-family: 'vazir';
+	border-radius: 3px;
+	text-align: center;
+	display: inline-block;
+}
+
+.controlsSelect{
+	text-align: center;
+	position: relative;
+	margin: 20px 10%;
+	display: inline-block;
+	width: 80%;
+	height: 50px;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=number],
+select,textarea{
+	font-size: 10px;
+	border: 1px solid #c6c6c6;
+	width: 100%;
+	height: 100%;
+	color: #888;
+	background: #fdfdfd;
+	font-family: 'vazir';
+	border-radius: 3px;
+	text-align: center;
+	display: inline-block;
+}
+
+.ion-navicon{
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	color: #444444;
+	z-index: 3;
+	border: none;
+}
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	text-align: right;
+}
+
+button {
+	border: 1px solid #333333;
+	width: 100%;
+	height: 80%;
+	color: #888;
+	background: none;
+	border-radius: 50%;
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.rating table tr{
+	height: 20px;
+	width: 100%;
+	float: right;
+	margin-top: 5px;
+}
+.rating table tr td{
+	height: 20px;
+	width: 20px;
+	float: right;
+	position: relative;
+	display: inline;
+}
+.rating table tr #firstTd{
+	height: 100%;
+	width: 50%;
+	text-align: center;
+}
+
+.rating table {
+	font-size: 12px;
+	height: 150px;
+	width: 97%;
+	float: right;
+}
+
+.filter {
+	float: right;
+	display: inline-block;
+	width: 25%;
+	min-width: 210px;
+	background: rgba(255,255,255,0.5);
+	height: 400px;
+	position: fixed;
+	right: 50px;
+	top: 160px;
+}
+.searchBar {
+	float: left;
+	display: inline-block;
+	width: 100%;	
+	height: 80px;
+	position: relative;
+}
+.searchBar p{
+	width: 25%;
+	display: inline-block;
+	text-align: right;
+	font-size: 20px;
+	font-family: 'vazir';
+	float: right;
+	margin-right: -30px;
+}
+.searchBar .container{
+	width: 75%;
+	display: inline-block;
+	text-align: right;
+	font-size: 22px;
+	font-family: 'vazir';
+	float: left;
+	margin: 0 0; 
+}
+#result {
+	width: 75%;
+	min-height: 700px;
+	position: relative;
+	display: inline-block;
+	float: left;
+}
+
+.project {
+	width: 80%;
+	margin-right: 10%;
+	float: right;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #777777;
+}
+.project .specifications {
+	float: right;
+	width: 70%;
+}
+.project img {
+	width: 20%;
+	display: inline-block;
+	border-radius: 5px;
+}
+.project .specifications a {
+	float: right;
+	font-size: 18px;
+	display: inline-block;
+	width: 90%;
+	margin: 0 0;
+	color: #555555;
+	text-decoration: none;
+}
+.project .specifications a:hover {
+	color: #A23BEC;
+}
+.project .specifications h3 {
+	float: right;
+	font-size: 13px;
+	display: inline-block;
+	width: 90%;
+	margin-bottom: 20px;
+}
+.project .cost h3 {
+	float: right;
+	font-size: 13px;
+	display: inline-block;
+	width: 90%;
+}
+.project .specifications h4 {
+	float: right;
+	font-size: 12px;
+	display: inline-block;
+	width: 90%;
+}
+
+.project .cost {
+	width: 30%;
+	float: left;
+	text-align: center;
+}
+
+.budget {
+	color: #C45AEC;
+}

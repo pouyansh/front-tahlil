@@ -129,11 +129,11 @@ for (var i = 0; i < abilities.data.length; i++) {
     s.value = 1;
     s.onclick = function() {
         if (this.value == 1) {
-            this.style.color = "orange";
+            this.style.backgroundColor = "#C45AEC";
             this.value = 2;
         }
         else {
-            this.style.color = "#f0f0f0";
+            this.style.backgroundColor = "rgba(0,0,0,0.4)";
             this.value = 1;
         }
     }
@@ -170,7 +170,7 @@ for (var i = 0; i < 7; i++) {
             span.value = 1;
             span.onclick = function() {
                 if (this.value == 1) {
-                    this.style.backgroundColor = "orange";
+                    this.style.backgroundColor = "#C45AEC";
                     this.value = 2;
                 }
                 else {

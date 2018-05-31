@@ -253,6 +253,9 @@ table {
   opacity: 0.6;
   color: white;
 }
+.bars div {
+  color: white;
+}
 
 .bars .legend {
   vertical-align: top;
@@ -283,31 +286,31 @@ table {
 /*Flat UI colors*/
 
 .one {
-  background: rgb(150,201,243);
+  background: #6C2DC7;
   text-align: center;
   color: #666;
 }
 
 .two {
-  background: rgb(81,166,236);
+  background: #7F38EC;
   text-align: center;
   color: #666;
 }
 
 .three {
-  background: rgb(31,140,231);
+  background: #893BFF;
   text-align: center;
   color: #666;
 }
 
 .four {
-  background: rgb(20,111,184);
+  background: #A23BEC;
   text-align: center;
   color: #666;
 }
 
 .five {
-  background: rgb(15,80,132);
+  background: #C45AEC;
   text-align: center;
   color: #666;
 }
