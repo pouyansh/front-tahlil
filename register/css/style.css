@@ -251,8 +251,8 @@ select,textarea,button{
 }
 .ion-navicon{
 	position: absolute;
-	left: 23px;
-	top: 30px;
+	left: 15px;
+	top: 18px;
 	color: #444444;
 	z-index: 3;
 	border: none;
