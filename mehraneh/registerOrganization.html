@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+	<title>ثبت نام- موسسات </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<div class="topmenu">
+				<div class="container">
+					<div class="topPhoto">
+						<img src="images/parsa.jpg">
+					</div>
+					<div class="topmenuelements">
+						<a href="http://google.com" class="name"> پارسا مرسل </a>
+					</div>
+					<div class="topmenudate">
+						<a href="#">خروج</a>
+					</div>
+					<div class="logo"> <img src="images/logo.jpg"></div>
+				</div>
+			</div>
+		</div>
+		<div class="mainPage">
+			<div class="wrapper"></div>
+			<div class="formm">
+				<form>
+					<h2>مشخصات</h2>
+					<div class="controls">
+						<input type="text" id="name" class="floatlabel" placeholder="نام موسسه">
+					</div>
+
+					<div class="controls">
+						<input type="text" id="lastname" class="floatlabel" placeholder="پروانه فعالیت">
+					</div>
+					
+					<div class="controls">
+						<input type="text" id="startDate" class="floatlabel" placeholder="سال ثبت">
+					</div>
+
+
+					<div class="controls">
+						<i class="ion-navicon"></i>
+						<select id="city" class="floatlabel">
+							<option value="blank">شهر</option>
+							<option value="Tehran">تهران</option>
+							<option value="Mashad">مشهد</option>
+							<option value="Esfehan">اصفهان</option>
+							<option value="Tabriz">تبریز</option>
+							<option value="Shiraz">شیراز</option>
+						</select>
+					</div>
+
+					<div class="controls">
+						<input type="text" id="addr" class="floatlabel" placeholder="آدرس">
+					</div>
+
+					<div class="controls">
+						<input type="email" id="email" class="floatlabel" placeholder="ایمیل">
+					</div>
+					
+					<div class="controls">
+						<input type="tel" id="tel" class="floatlabel" placeholder="تلفن">
+					</div>
+					<div class="controls">
+						<input type="web" id="web" class="floatlabel" placeholder="وب سایت">
+					</div>
+					
+
+					<h2>توانایی مورد نیاز</h2>
+					<div class="controlsAbility">
+						<select id="candidate" class="floatlabel">
+							<option value="blank"></option>
+							<option value="رانندگی">رانندگی</option>
+							<option value="حسابداری">حسابداری</option>
+							<option value="آموزش">آموزش</option>
+						</select>
+	    				<button id="add" onclick="addItem()"><h3>+</h3></button>
+						<ul id="dynamiclist"></ul>
+						<br><br>
+					</div>
+
+				
+					<h2>بیشتر...</h2>
+					<div class="controls">
+					<textarea id="cm" class="floatlabel" placeholder="نظر شما"></textarea>
+					</div>
+					
+					<div class="controls">
+						<input type="checkbox" id="checkbox" class="checkbox">
+						<label for="checkbox"><span></span>قوانین را قبول دارم</label>
+					</div>
+					
+					<button>ثبت</button>
+				</form>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="addr">
+					<h4> خیابان آزادی، بلوار اکبری، خیابان قاسمی، پلاک ۳۶، واحد ۲ </h4>
+					<h4>تلفن: ۰۲۱۸۸۳۴۲۸۹۱</h4>
+				</div>
+			</div>
+			<div class="copy">
+				<h4>کپی‌رایت رعایت شود.</h4>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/registerOrganization.js"></script>
+	<script src="js/jquery.min.js"></script>
+</body>
+</html>

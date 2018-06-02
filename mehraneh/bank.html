@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+	<title>درگاه پرداخت بانک </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bank.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<div class="topmenu">
+				<div class="container">
+					<div class="topPhoto">
+						<img src="images/parsa.jpg">
+					</div>
+					<div class="topmenuelements">
+						<a href="http://google.com" class="name"> پارسا مرسل </a>
+					</div>
+					<div class="topmenudate">
+						<a href="#">خروج</a>
+					</div>
+					<div class="logo"> <img src="images/logo.jpg"></div>
+				</div>
+			</div>
+		</div>
+		<div class="mainPage">
+			<div class="wrapper"></div>
+			<div class="topPage">
+				<h2>دروازه پرداخت اینترنتی</h2>
+				<div class="topcontrols"> 
+					<label for="receivername">نام پذیرنده</label>
+					<input type="text" id="receivername">
+				</div>
+				<div class="topcontrols">
+					<label for="price">مبلغ قابل پرداخت (تومان)</label>
+					<input type="text" id="price">
+				</div>	
+				
+			</div>
+			
+			<div class="formm">
+				<form>
+					<div class="controls">
+						<label for="t1"> شماره کارت </label>
+						<input type="text" id="fourth" maxlength="4" >
+						<h3>-</h3><input type="text" id="third" maxlength="4" onkeyup="movetoNext(this, 'fourth')">
+						<h3>-</h3><input type="text" id="second" maxlength="4" onkeyup="movetoNext(this, 'third')">
+						<h3>-</h3><input type="text" id="first" maxlength="4" onkeyup="movetoNext(this, 'second')">
+					</div>
+					
+					<div class="controls">
+						<label for="pass">رمز اینترنتی</label>
+						<input type="text" name="pass">
+					</div>
+					<div class="controls">
+						<label for="cvv2"> رمز دوم کارت</label>
+						<input type="text" name="cvv2">
+					</div>
+					<div class="controls">
+						<label for="expdate">تاریخ انقضای کارت</label>
+						<input type="number" id="expmonth">
+						<input type="number" id="expyear">
+					</div>
+					<div class="buttonclass">
+						<button>پرداخت</button>
+						<button>انصراف</button>
+					</div>
+	
+				</form>
+				
+			</div>
+			<div class="photo">
+				<img src="images/bank.png">
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="addr">
+					<h4> خیابان آزادی، بلوار اکبری، خیابان قاسمی، پلاک ۳۶، واحد ۲ </h4>
+					<h4>تلفن: ۰۲۱۸۸۳۴۲۸۹۱</h4>
+				</div>
+			</div>
+			<div class="copy">
+				<h4>کپی‌رایت رعایت شود.</h4>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/bank.js"></script>
+	<script src="js/jquery.min.js"></script>
+</body>
+</html>
