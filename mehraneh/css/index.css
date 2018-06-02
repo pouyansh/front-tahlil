@@ -1,0 +1,202 @@
+@font-face{
+	font-family: 'vazir';
+	src:url("../fonts/Vazir-FD.woff")format("woff"),
+	url("../fonts/Vazir-FD.eot")format("eot"),
+	url("../fonts/Vazir-FD.ttf")format("truetype")
+}
+#test {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 1200px;
+	top: 0;
+	right: 0;
+	background: rgba(0,0,0,0.6);
+	z-index: 9;
+}
+.login .exit {
+    max-width: 25px;
+    max-height: 25px;
+    margin-top: -10px;
+    margin-right: -30px;
+    border-radius: 50%;
+    font-size: 14px;
+    font-family: 'vazir';
+    border: none;
+    background: #fdfdfd;
+    text-align: center;
+    display: block;
+}
+#testreg {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 1200px;
+	top: 0;
+	right: 0;
+	background: rgba(0,0,0,0.6);
+	z-index: 10;
+}
+.header .topmenu{
+	padding-bottom: 10px;
+}
+
+.topmenudate h3{
+	color: #dddddd;
+	font-size: 15px;
+	margin-right: 30px;
+}
+
+.topmenudate button, .topmenudate a {
+	background: none;
+	font-size: 15px;
+}
+.topmenudate button:hover, .topmenudate a:hover {
+	color: rgb(55,204,253);
+}
+.topmenuelement {
+	float: right;
+	font-family: 'vazir';
+	font-size: 12px;
+	margin-right: 20px;
+	margin-top: 5px;
+}
+
+.wrappers{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+}
+.login, .register{
+	border-radius: 10px;
+	padding: 0px 20px 20px 20px;
+	width: 100%;
+	max-width: 400px;
+	background: #fff;
+	box-shadow: 0px 1px 5px rgba(0,0,0,.3);
+	position: relative;
+	margin: 0px auto;
+	margin-top: -500px;
+}
+.login input.login-text{
+	display: block;
+	padding: 15px 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	border: 1px solid #ddd;
+	-webkit-transition: border-width .2s ease;
+	-o-transition: border-width .2s ease;
+	transition: border-width .2s ease;
+	color: #ccc;
+	text-align: right;
+}
+.login input.login-text + i{
+	color: #fff;
+	font-size: 1em;
+	position: absolute;
+	margin-top: -44px;
+	right: 0;
+	opacity: 0;
+	transition: all .2s;
+	margin-right: 3px;
+}
+.login input.login-text:focus{
+	outline: none;
+	color: #444;
+	border-color: #2196f3;
+	border-right-width: 35px;
+}
+.login input.login-text:focus + i{
+	opacity: 1;
+	right: 30px;
+	transition: all .2s
+}
+.login .title, .register .title{
+	text-align: right;
+	color: #444;
+	font-size: 19px;
+	margin: 10px 0 30px 0;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 20px;
+	width: 100%;
+	height: 30px;
+	display: inline-block;
+}
+
+.login .forget{
+	padding: 13px 5px;
+	text-align: center;
+	color: #fff;
+	background: #d75c4c;
+	width: 45%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	float: right;	
+	border-radius: 10px;
+}
+
+.login .forget:hover{
+	background: #f72c2c;
+}
+
+.enter {
+	width: 45%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	float: right;
+}
+
+.enter button, .enter a{
+	padding: 13px 5px;
+	text-align: center;
+	color: #fff;
+	background: #229922;
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+	text-decoration: none;
+	display: inline-block;
+}
+.register .enter button, .register .enter a {
+	background: rgb(119,136,153);
+}
+.register .enter button:hover, .register .enter a:hover {
+	background: rgb(176,196,222);
+}
+
+.enter button:hover{
+	background: #22cc22;
+	width: 100%;
+}
+
+.login p {
+	margin-top: 20px;
+	display: inline;
+	font-family: 'vazir';
+	font-size: 13px;
+}
+
+.login a, .login button{
+	margin-top: 20px;
+	font-size: 13px;
+	text-decoration: none;
+}
+.login .reg{
+	background: none;
+}
+.login a:hover, .login button:hover {
+	color: #9999ee;
+}
+
+
+.ion-navicon{
+	position: absolute;
+	left: 15px;
+	top: 18px;
+	color: #444444;
+	z-index: 3;
+	border: none;
+}

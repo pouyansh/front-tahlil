@@ -100,7 +100,7 @@ h2{
 	color: rgb(55,204,253);
 }
 
-.header .topmenu .container .topmenudate a {
+.header .topmenu .container .topmenudate a, .header .topmenu .container .topmenudate button {
 	font-family: 'vazir';
 	float: right;
 	width: auto;
@@ -113,7 +113,7 @@ h2{
 	box-sizing: border-box;
 }
 
-.header .topmenu .container .topmenudate a:hover { 
+.header .topmenu .container .topmenudate a:hover, .header .topmenu .container .topmenudate button:hover { 
 	color: rgb(55,204,253);
 }
 
@@ -142,9 +142,8 @@ h2{
 }
 
 .main .mainPage {
-	margin-top: 60px;
 	width: 100%;
-	min-height: 600px;
+	min-height: 650px;
 	position: relative;
 	display: inline-block;
 	z-index: 2;

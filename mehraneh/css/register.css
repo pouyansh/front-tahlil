@@ -1,3 +1,23 @@
+.mainContainer {
+	width: 60%;
+	margin: 200px auto;
+}
+
+.mainContainer .benefactor {
+	background: rgb(72,61,139);
+	border-radius: 10px;
+	width: 40%;
+	height: 30px;
+	color: #fdfdfd;
+	float: right;
+	margin: 0 5%;
+	text-decoration: none;
+	text-align: center;
+}
+.mainContainer a:hover {
+	background: rgba(72,61,139,0.7);	
+}
+
 .formm {
 	width: 100%;
 	margin: 50px auto;
@@ -31,7 +51,7 @@ input[type=email],
 input[type=tel],
 input[type=number],
 input[type=web],
-select,textarea,button{
+select,textarea, form button{
 	padding: 18px;
 	border: 1px solid #c6c6c6;
 	width: 100%;
@@ -127,7 +147,7 @@ textarea{
 	position: relative;
 	margin-left: 5px;
 }
-button{
+form button{
 	font-family: 'vazir';
 	cursor: pointer;
 	background: #3498db;
