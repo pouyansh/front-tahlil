@@ -142,7 +142,6 @@ input[type=number]::-webkit-outer-spin-button {
 	width: 25%;
 	min-width: 210px;
 	background: rgba(255,255,255,0.5);
-	height: 300px;
 	position: fixed;
 	right: 50px;
 	top: 160px;
@@ -154,14 +153,14 @@ input[type=number]::-webkit-outer-spin-button {
 	height: 80px;
 	position: relative;
 }
-.searchBar p{
-	width: 25%;
+.filter p{
+	width: 100%;
 	display: inline-block;
-	text-align: right;
-	font-size: 20px;
+	text-align: center;
+	font-size: 18px;
 	font-family: 'vazir';
 	float: right;
-	margin-right: -30px;
+	margin-top: 10px;
 }
 .searchBar .container{
 	width: 75%;
@@ -189,7 +188,21 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .project .specifications {
 	float: right;
-	width: 70%;
+	width: 50%;
+}
+.specifications ul{
+	font-size: 12px;
+	list-style: none;
+	color: #fdfdfd;
+	margin-bottom: 5px;
+}
+.specifications ul li{
+	background: rgba(0,0,0,0.4);
+	display: inline-block;
+	width: 30%;
+	margin: 5px 1.5% 0 1.5%;
+	border-radius: 10px;
+	text-align: center;
 }
 .project img {
 	width: 20%;
@@ -199,8 +212,8 @@ input[type=number]::-webkit-outer-spin-button {
 .project .specifications a {
 	float: right;
 	font-size: 18px;
-	display: inline-block;
-	width: 90%;
+	display: block;
+	width: 100%;
 	margin: 0 0;
 	color: #555555;
 	text-decoration: none;
@@ -218,8 +231,8 @@ input[type=number]::-webkit-outer-spin-button {
 .project .cost h3 {
 	float: right;
 	font-size: 13px;
-	display: inline-block;
-	width: 90%;
+	display: block;
+	width: 100%;
 }
 .project .specifications h4 {
 	float: right;
@@ -229,11 +242,10 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .project .cost {
-	width: 30%;
+	width: 20%;
 	float: left;
 	text-align: center;
 }
-
 .budget {
 	color: #C45AEC;
 }
@@ -253,6 +265,7 @@ input[type=number]::-webkit-outer-spin-button {
 	background: #357EC7;
 	color: #fdfdfd;
 	border-radius: 5px;
+	margin-bottom: 20px;
 }
 
 .mybutton:hover {
