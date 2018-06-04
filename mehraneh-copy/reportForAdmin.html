@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+	<title>گزارش فعالیت کاربران </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/reportForAdmin.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<div class="topmenu">
+				<div class="container">
+					<div class="topPhoto">
+						<img src="images/parsa.jpg">
+					</div>
+					<div class="topmenuelements">
+						<a href="http://google.com" class="name"> پارسا مرسل </a>
+					</div>
+					<div class="topmenudate">
+						<a href="#">خروج</a>
+					</div>
+					<div class="logo"> <img src="images/logo.jpg"></div>
+				</div>
+			</div>
+		</div>
+		<div class="mainPage">
+			<div class="wrapper"></div>
+			<div class="container">
+				<div class="filter">
+					<p>گزارش فعالیت کاربران</p>
+					<div class="controlsSelect">
+						<i class="ion-navicon"></i>
+						<select id="field" onchange="show()"></select>
+					</div>
+					<div class="controls">
+						<input id="orgName" type="text" placeholder="نام موسسه"  onchange="show()">
+						<img src="images/search.png" onclick="show()">
+					</div>
+					<div class="controls">
+						<input id="beneName" type="text" placeholder="نام یکوکار"  onchange="show()">
+						<img src="images/search.png" onclick="show()">
+					</div>
+					<h4> مرتب‌سازی بر اساس </h4>
+					<div class="controls">
+						<i class="ion-navicon"></i>
+						<select id="sortType">
+							<option value="budgetD">بودجه، نزولی</option>
+							<option value="budgetA">بودجه، صعودی</option>
+							<option value="participantsD">تعداد مشارکت کنندگان، نزولی</option>
+							<option value="participantsA">تعداد مشارکت کنندگان، صعودی</option>
+						</select>
+					</div>
+					<button class="mybutton" onclick="show()">اعمال تغییرات</button>
+				</div>
+				
+				<div id="result">
+					<div class="report">
+						<div class="people">
+							<span class="benefactor">نیکوکار: پویان شیرزادیان</span>
+							<span class="organization">موسسه: جمعیت امام علی</span>
+							<span class="type">امتیازدهی</span>
+						</div>
+						<div class="rating">
+							<table id="ratingTable">
+								<tr id="tr1">
+									<td class="firstTd">فعالیت اعضا</td>
+									<td><button id="button11"></button></td>
+									<td><button id="button12"></button></td>
+									<td><button id="button13"></button></td>
+								</tr>
+								<tr id="tr2">
+									<td id="firstTd">مسيولیت پذیری</td>
+									<td><button id="button21"></button></td>
+									<td><button id="button22"></button></td>
+									<td><button id="button23"></button></td>
+									<td><button id="button24"></button></td>
+									<td><button id="button25"></button></td>
+								</tr>
+								<tr id="tr3">
+									<td id="firstTd">صداقت</td>
+									<td><button id="button31"></button></td>
+									<td><button id="button32"></button></td>
+									<td><button id="button33"></button></td>
+									<td><button id="button34"></button></td>
+								</tr>
+								<tr id="tr4">
+									<td id="firstTd">تعهد</td>
+									<td><button id="button41"></button></td>
+								</tr>
+								<tr id="tr5">
+									<td id="firstTd">جو</td>
+									<td><button id="button51"></button></td>
+									<td><button id="button52"></button></td>
+									<td><button id="button53"></button></td>
+								</tr>
+							</table>
+						</div>
+						<div class="more">
+							<h3>خیلی کادر خوبی دارن و خیلی تجربه خوبی بود</h3>
+						</div>
+						<button class="remove" onclick="">حذف</button>
+					</div>
+					<div class="report">
+						<div class="people">
+							<span class="benefactor">نیکوکار: پویان شیرزادیان</span>
+							<span class="organization">موسسه: جمعیت امام علی</span>
+							<span class="type">پیشنهاد همکاری</span>
+						</div>
+						<div class="more">
+							<h3>من می‌توانم در موسسه شما در قسمت مالی شروع به فعالیت کنم.</h3>
+						</div>
+					</div>
+					<div class="report">
+						<div class="people">
+							<span class="organization">موسسه: جمعیت امام علی</span>
+							<span class="benefactor">نیکوکار: پویان شیرزادیان</span>
+							<span class="type">پیشنهاد همکاری</span>
+						</div>
+						<div class="week">
+							<table id="tab">
+								<thead>
+									<th class="firstCol"></th>
+									<th> 8-10 </th>
+									<th> 10-12 </th>
+									<th> 12-15 </th>
+									<th> 15-17 </th>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="firstCol">شنبه</td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+									</tr>
+									<tr>
+										<td class="firstCol">یکشنبه</td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+									</tr>
+									<tr>
+										<td class="firstCol">دوشنبه</td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+									</tr>
+									<tr>
+										<td class="firstCol">سه‌شنبه</td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+									</tr>
+									<tr>
+										<td class="firstCol">چهارشنبه</td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+									</tr>
+									<tr>
+										<td class="firstCol">پنجشنبه</td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+									</tr>
+									<tr>
+										<td class="firstCol"> جمعه </td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+										<td class="otherCol"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="more">
+							<h3>من می‌توانم در موسسه شما در قسمت مالی شروع به فعالیت کنم.</h3>
+						</div>
+					</div>
+					<div class="report">
+						<div class="people">
+							<span class="benefactor">نیکوکار: پویان شیرزادیان</span>
+							<span class="organization">موسسه: جمعیت امام علی</span>
+							<span class="type">کمک مالی</span>
+						</div>
+						<div class="proj">
+							<h3>مبلغ: ۱۰۰۰۰۰</h3>
+						</div>
+						<div class="more">
+							<h4>خرید دفتر برای کودکان</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="container">
+				<div class="addr">
+					<h4> خیابان آزادی، بلوار اکبری، خیابان قاسمی، پلاک ۳۶، واحد ۲ </h4>
+					<h4>تلفن: ۰۲۱۸۸۳۴۲۸۹۱</h4>
+				</div>
+			</div>
+			<div class="copy">
+				<h4>کپی‌رایت رعایت شود.</h4>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/reportForAdmin.js"></script>
+	<script src="js/jquery.min.js"></script>
+</body>
+</html>
