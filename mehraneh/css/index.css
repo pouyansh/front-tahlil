@@ -1,3 +1,204 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	border: none;
+}
+
+@font-face{
+	font-family: 'vazir';
+	src:url("../fonts/Vazir-FD.woff")format("woff"),
+	url("../fonts/Vazir-FD.eot")format("eot"),
+	url("../fonts/Vazir-FD.ttf")format("truetype")
+}
+
+body {
+	font-family: 'vazir';
+	height: 1000px;
+}
+
+h2{
+	margin-bottom: 10px;
+	margin-top: 30px;
+}
+
+.main {
+	width: 100%;
+	float: right;
+	background: url('../images/back1.jpg') fixed;
+	height: 100%; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	min-width: 300px;
+}
+
+.main .header {
+	width: 100%;
+	height: 130px;
+	color: #eeeeee;
+	float: right;
+	position: fixed;
+	min-width: 300px;
+	z-index: 6;
+}
+
+.header .topmenu {
+	width: 100%;
+	height: 60px;
+	float: right;
+	background: #777777;
+	box-sizing: border-box;
+	position: relative;
+	display: block;
+}
+
+.header .topmenu .container {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.header .topmenu .container .topPhoto{
+	float: right;
+	width: 50px;
+	height: 50px;
+	margin: 5px 20px 5px 0px;
+	box-sizing: border-box;
+}
+
+.header .topmenu .container .topPhoto img{
+	float: right;
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.header .topmenu .container .topmenuelements {
+	float: right;
+	width: 80px;
+	margin: 15px 15px 0 0;
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+}	
+
+.header .topmenu .container .topmenuelements a {
+	font-family: 'vazir';
+	float: right;
+	width: auto;
+	min-width: 8%;
+	color: #aaaaaa;
+	border: none;
+	position: relative;
+	text-decoration: none;
+	display: inline-block;
+	margin-right: 2px;
+	box-sizing: border-box;
+}
+
+.header .topmenu .container .topmenuelements a:hover { 
+	color: rgb(55,204,253);
+}
+
+.header .topmenu .container .topmenudate a, 
+.header .topmenu .container .topmenudate button {
+	font-family: 'vazir';
+	float: right;
+	width: auto;
+	min-width: 8%;
+	color: #aaaaaa;
+	border: none;
+	text-decoration: none;
+	display: inline-block;
+	margin-right: 2px;
+	box-sizing: border-box;
+}
+
+.header .topmenu .container .topmenudate a:hover, .header .topmenu .container .topmenudate button:hover { 
+	color: rgb(55,204,253);
+}
+
+.header .topmenu .container .topmenudate {
+	font-family: 'vazir';
+	float: right;
+	margin-top: 15px;
+	margin-right: 10px;
+	position: relative;
+	color: #999999;
+	box-sizing: border-box;
+}
+
+.header .topmenu .container .logo {
+	float: left;
+	height: 60px;
+	width: 30%;
+	margin-left: 5px;
+	box-sizing: border-box;
+}
+
+.header .topmenu .container .logo img{
+	height: 100%;
+	float: left;
+	box-sizing: border-box;
+}
+.header .mainmenu {
+	width: 100%;
+	position: relative;
+	height: 60px;
+	margin-top: 60px;
+}
+
+.main .mainPage {
+	width: 100%;
+	min-height: 650px;
+	position: relative;
+	display: inline-block;
+	z-index: 2;
+	margin-top: 60px;
+}
+
+.main .mainPage .wrapper {
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,.6);
+	position: fixed;
+	z-index: 1;
+}
+
+.main .footer {
+	width: 100%;
+	float: right;
+	background: #777777;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+}
+
+.main .footer .container {
+	float: right;
+	width: 100%;
+}
+
+.main .footer .container .addr {
+	color: #eeeeee;
+	float: right;
+	display: block;
+	margin-right: 50px;
+}
+
+.main .footer .container .addr h4{
+	margin-top: 10px;
+}
+
+.main .footer .copy {
+	color: #dddddd;
+	margin: 10px auto;
+	text-align: center;
+	font-size: 12px;
+}
 @font-face{
 	font-family: 'vazir';
 	src:url("../fonts/Vazir-FD.woff")format("woff"),
@@ -14,7 +215,7 @@
 	background: rgba(0,0,0,0.6);
 	z-index: 9;
 }
-.login .exit {
+.exit {
     max-width: 25px;
     max-height: 25px;
     margin-top: -10px;
@@ -37,9 +238,7 @@
 	background: rgba(0,0,0,0.6);
 	z-index: 10;
 }
-.header .topmenu{
-	padding-bottom: 10px;
-}
+
 
 .topmenudate h3{
 	color: #dddddd;
@@ -61,7 +260,27 @@
 	margin-right: 20px;
 	margin-top: 5px;
 }
-
+.menu {
+	width: 70%;
+	margin: auto;
+	height: 60px;
+	position: relative;
+}
+.menu ul {
+	display: inline;
+	float: right;
+	width: 100%;
+}
+.menu ul li {
+	display: inline-block;
+	width: 18%;
+	float: right;
+	margin: 1%;
+}
+.menu ul li a {
+	text-decoration: none;
+	color: red;
+}
 .wrappers{
 	display: flex;
 	align-items: center;
@@ -199,4 +418,213 @@
 	color: #444444;
 	z-index: 3;
 	border: none;
+}
+
+
+#cc{
+	width: 100%;
+	
+}
+.main {
+	background: url('../images/5.png');
+	height: 3200px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.section1, .section2, .section3, .section4, .section5 {
+	width: 100%;
+	height: 500px;
+	display: block;
+	text-align: justify;
+	position: relative;
+	z-index: 5;
+}
+
+.section1 p, .section2 p, .section3 p , .section4 p {
+	font-size: 18px;
+	width: 50%;
+	margin-top: 20%;
+	float: right;
+	margin-right: 6%;
+	position: absolute;
+	z-index: 7;
+}
+#p21, #p41 {
+	font-size: 18px;
+	width: 70%;
+	float: right;
+	margin-right: 15%;
+	position: absolute;
+	z-index: 5;
+	margin-top: 250px;
+	color: #fafafa;
+	background: rgba(0,0,0,0.3);
+	padding: 0 30px;
+}
+
+.section1 img {
+	float: left;
+	width: 40%;
+	margin-top: 45%;
+	margin-left: 5%;
+	position: relative;
+}
+
+#p2 {
+	margin-top: 200px;
+	width: 100%;
+	display: block;
+	height: 300px;
+	position: absolute;
+	opacity: 0.5;
+	background: url('../images/8.jpg') fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#p4 {
+	margin-top: 200px;
+	width: 100%;
+	display: block;
+	height: 300px;
+	position: absolute;
+	opacity: 0.5;
+	background: url('../images/9.jpg') fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#c2 .enter, #c4 .enter {
+	width: 20%;
+	margin-left: 0;
+	margin-right: 40%;
+	height: 20px;
+	font-size: 14px;
+	float: right;
+	position: absolute;
+	margin-top: 400px;
+
+}
+
+#c2 .enter a, #c4 .enter a{
+	background: rgb(3,185,245);
+	color: #222222;
+}
+
+#c2 .enter a:hover, #c4 .enter a:hover{
+	opacity: 0.7;
+}
+
+.organization {
+	width: 21%;
+	height: 80%;
+	margin: 10% 2% 0 2%;
+	display: inline-block;
+	float: right;
+	text-align: center;
+}
+
+#chart {
+  margin-top: 50px;
+  position: relative;
+  border: none;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto; 
+  margin-bottom: 0;
+}
+
+.charttitle {
+  text-align: center;
+}
+.bars td {
+  vertical-align: top;
+  float: right;
+  width: 19%;
+  height: 150px;
+  border: none;
+  position: relative;
+}
+
+.bars div:hover {
+  opacity: 0.6;
+  color: white;
+}
+.bars div {
+  color: white;
+}
+
+.bars .legend {
+  vertical-align: top;
+  padding-left: 20px;
+  text-align: left;
+  width: 35%;
+  margin-right: 5%;
+}
+
+.legbox {
+  display: block;
+  clear: both;
+}
+
+.xaxisname {
+  margin: 5px;
+  color: #fff;
+  font-size: 77%;
+  padding: 5px;
+  float: right;
+}
+
+.legbox span {
+	float: right;
+}
+
+
+/*Flat UI colors*/
+
+.one {
+  background: #6C2DC7;
+  text-align: center;
+  color: #666;
+}
+
+.two {
+  background: #7F38EC;
+  text-align: center;
+  color: #666;
+}
+
+.three {
+  background: #893BFF;
+  text-align: center;
+  color: #666;
+}
+
+.four {
+  background: #A23BEC;
+  text-align: center;
+  color: #666;
+}
+
+.five {
+  background: #C45AEC;
+  text-align: center;
+  color: #666;
+}
+.organization .projects {
+	width: 90%;
+	margin-top: 20px;
+}
+.projects ul {
+	font-size: 12px;
+	list-style-type: circle;
+}
+.projects ul li{
+	text-align: right;
+}
+.organization h2 {
+	font-size: 18px;
 }
