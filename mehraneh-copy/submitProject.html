@@ -34,7 +34,7 @@
 					</div>
 					
 					<div class="controls">
-						<input type="text" id="lastname" class="floatlabel" placeholder="مبلغ مورد نیاز جهت تکمیل پروژه (تومان)">
+						<input type="text" id="budget" class="floatlabel" placeholder="مبلغ مورد نیاز جهت تکمیل پروژه (تومان)">
 					</div>
 	
 
@@ -42,17 +42,30 @@
 						<i class="ion-navicon"></i>
 						<select id="city" class="floatlabel">
 							<option value="blank">شهر</option>
-							<option value="Tehran">تهران</option>
-							<option value="Mashad">مشهد</option>
-							<option value="Esfehan">اصفهان</option>
-							<option value="Tabriz">تبریز</option>
-							<option value="Shiraz">شیراز</option>
+							
 						</select>
 					</div>
 
 		
 					<div class="controls">
 						<textarea id="cm" class="floatlabel" placeholder="توضیحات مربوط به پروژه"></textarea>
+					</div>
+					
+					<div class="controls">
+						<i class="ion-navicon"></i>
+						<select id="way" class="floatlabel" onchange="changed()">
+							<option value="blank">نحوه پرداخت</option>
+							<option value="card">به شماره کارت بانکی</option>
+							<option value="account">به شماره حساب</option>
+						</select>
+					</div>
+					
+					<div class="controls">
+						<input type="number" id="cardNum" class="floatlabel" placeholder="شماره کارت بانکی" style="display: none">
+					</div>
+					
+					<div class="controls">
+						<input type="number" id="accNum" class="floatlabel" placeholder="شماره حساب بانکی" style="display: none">
 					</div>
 
 					<h2>زمینه کار پروژه</h2>
@@ -66,7 +79,6 @@
 						</select>
 	    				<button id="add" onclick="addItem()"><h3>+</h3></button>
 						<ul id="dynamiclist"></ul>
-						<br><br>
 					</div>
 					
 					<div class="controls">

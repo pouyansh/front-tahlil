@@ -41,3 +41,28 @@ function addItem(){
         }
     }
 }
+
+var cities = ["تهران","مشهد","اصفهان","شیراز"]
+var sel = document.getElementById('city');
+for (i=0;i<cities.length;i++) {
+	var opt = document.createElement('option');
+	opt.setAttribute('value', cities[i]);
+	opt.innerHTML = cities[i];
+	sel.appendChild(opt);
+}
+
+function changed() {
+	var way = document.getElementById("way").value;
+	if (way=="blank") {
+		document.getElementById("cardNum").style.display = "none";
+		document.getElementById("accNum").style.display = "none";
+	}
+	if (way=="account") {
+		document.getElementById("cardNum").style.display = "none";
+		document.getElementById("accNum").style.display = "block";
+	}
+	if (way=="card") {
+		document.getElementById("cardNum").style.display = "block";
+		document.getElementById("accNum").style.display = "none";
+	}
+}

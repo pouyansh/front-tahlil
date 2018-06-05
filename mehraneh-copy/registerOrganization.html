@@ -33,10 +33,6 @@
 					<div class="controls">
 						<input type="text" id="name" class="floatlabel" placeholder="نام موسسه">
 					</div>
-
-					<div class="controls">
-						<input type="text" id="lastname" class="floatlabel" placeholder="پروانه فعالیت">
-					</div>
 					
 					<div class="controls">
 						<input type="text" id="startDate" class="floatlabel" placeholder="سال ثبت">
@@ -47,11 +43,6 @@
 						<i class="ion-navicon"></i>
 						<select id="city" class="floatlabel">
 							<option value="blank">شهر</option>
-							<option value="Tehran">تهران</option>
-							<option value="Mashad">مشهد</option>
-							<option value="Esfehan">اصفهان</option>
-							<option value="Tabriz">تبریز</option>
-							<option value="Shiraz">شیراز</option>
 						</select>
 					</div>
 
@@ -69,19 +60,21 @@
 					<div class="controls">
 						<input type="web" id="web" class="floatlabel" placeholder="وب سایت">
 					</div>
+
+					<div class="controls">
+						<h5> پروانه فعالیت </h5>
+						<input type="file" id="parvaneh" class="floatlabel" placeholder="پروانه فعالیت">
+					</div>
 					
 
 					<h2>توانایی مورد نیاز</h2>
 					<div class="controlsAbility">
 						<select id="candidate" class="floatlabel">
 							<option value="blank"></option>
-							<option value="رانندگی">رانندگی</option>
-							<option value="حسابداری">حسابداری</option>
-							<option value="آموزش">آموزش</option>
+							
 						</select>
 	    				<button id="add" onclick="addItem()"><h3>+</h3></button>
 						<ul id="dynamiclist"></ul>
-						<br><br>
 					</div>
 
 				

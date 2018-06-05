@@ -23,129 +23,123 @@ function f(){
 f();
 var check = 0;
 var p = document.getElementById('c1');
-var ptop = p.style.top;
+var ptop = 1;
 var p2 = document.getElementById('c2');
-var ptop2 = p2.style.top;
+var ptop2 = 1;
 var p3 = document.getElementById('c3');
-var ptop3 = p3.style.top;
+var ptop3 = 1;
 var p4 = document.getElementById('c4');
-var ptop4 = p4.style.top;
+var ptop4 = 1;
 var p5 = document.getElementById('c5');
-var ptop5 = p5.style.top;
+var ptop5 = 1;
 window.addEventListener("scroll", function(){
 	var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-	if (scrollTop <= 920 && scrollTop >= 480 && (check == 0 || check == 2)){
+	if (scrollTop <= 920 && scrollTop >= 490 && (check == 0 || check == 2)){
 		if (check == 0) {
-			myLoop1(400);
+			myLoop1();
 		}
 		else { 
-			myLoop22(400);
+			myLoop22();
 		}
 		check = 1;
 	}
-	if (scrollTop <= 480 && check==1){
-		myLoop12(400);
+	if (scrollTop <= 920){
+		myLoop22();
+	}
+	if (scrollTop <= 440){
+		myLoop12();
 		check = 0;
 	}
-	if (scrollTop <= 1400 && scrollTop >= 960 && (check == 1 || check == 3)){
+	if (scrollTop <= 1400 && scrollTop >= 970 && (check == 1 || check == 3)){
 		if (check == 1) {
-			myLoop2(400);
+			myLoop2();
 		}
 		else { 
-			myLoop32(400);
+			myLoop32();
 		}
 		check = 2;
 	}
-	if (scrollTop <= 1880 && scrollTop >= 1440 && (check == 2 || check == 4)){
+	if (scrollTop <= 1400){
+		myLoop32();
+	}
+	if (scrollTop <= 1880 && scrollTop >= 1450 && (check == 2 || check == 4)){
 		if (check == 2) {
-			myLoop3(400);
+			myLoop3();
 		}
 		else { 
-			myLoop42(400);
+			myLoop42();
 		}
 		check = 3;
 	}
-	if (scrollTop >= 1920 && check == 3 ){
-		myLoop4(400);
+	if (scrollTop <= 1880){
+		myLoop42();
+	}
+	if (scrollTop >= 1930 && check == 3 ){
+		myLoop4();
 		check = 4;
 	}
 
 }, false)
 
-function myLoop1 (i) {          
+function myLoop1 () {          
    setTimeout(function () {   
-   	  ptop = ptop-2;
-      p.style.top = ptop+"px";     
-      if (--i && ptop > -400) myLoop1(i); 
-   }, 0.25)
+   	  ptop = ptop-0.01;
+      p.style.opacity = ptop;     
+      if (ptop > 0.3) myLoop1(); 
+   }, 50)
 }
-function myLoop12 (i) {          
+function myLoop12 () {          
    setTimeout(function () {
-   	  if (ptop < 0){
-   	  ptop = ptop+2;
-      p.style.top = ptop+"px";
-      if (--i) myLoop12(i); }
-   }, 0.25)
+   	  if (ptop < 1){
+   	  ptop = ptop+0.01;
+      p.style.opacity = ptop;
+      myLoop12(); }
+   }, 50)
 }
-function myLoop2 (i) {          
-   setTimeout(function () {
-   	  ptop2 = ptop2-2;  
-      p2.style.top = ptop2+"px";       
-      if (--i && ptop2 > -400) myLoop2(i); 
-   }, 0.25)
+function myLoop2 () {          
+   setTimeout(function () {   
+   	  ptop2 = ptop2-0.01;
+      p2.style.opacity = ptop2;     
+      if (ptop2 > 0.3) myLoop2(); 
+   }, 50)
 }
-function myLoop22 (i) {          
+function myLoop22 () {          
    setTimeout(function () {
-   	  if (ptop2 < 0){
-   	  ptop2 = ptop2+2;  
-      p2.style.top = ptop2+"px";       
-      if (--i) myLoop22(i); }
-   }, 0.25)
+   	  if (ptop2 < 1){
+   	  ptop2 = ptop2+0.01;
+      p2.style.opacity = ptop2;
+      myLoop22(); }
+   }, 50)
 }
-function myLoop3 (i) {          
-   setTimeout(function () {
-   	  ptop3 = ptop3-2;  
-      p3.style.top = ptop3+"px";        
-      if (--i && ptop3 > -400) myLoop3(i); 
-   }, 0.25)
+function myLoop3 () {          
+   setTimeout(function () {   
+   	  ptop3 = ptop3-0.01;
+      p3.style.opacity = ptop3;     
+      if (ptop3 > 0.3) myLoop3(); 
+   }, 50)
 }
-function myLoop32 (i) {          
+function myLoop32 () {          
    setTimeout(function () {
-   	  if (ptop3 < 0){
-   	  ptop3 = ptop3+2;  
-      p3.style.top = ptop3+"px";        
-      if (--i) myLoop32(i); }
-   }, 0.25)
+   	  if (ptop3 < 1){
+   	  ptop3 = ptop3+0.01;
+      p3.style.opacity = ptop3;
+      myLoop32(); }
+   }, 50)
 }
-function myLoop4 (i) {          
-   setTimeout(function () {
-   	  ptop4 = ptop4-2;  
-      p4.style.top = ptop4+"px";        
-      if (--i && ptop4 > -400) myLoop4(i); 
-   }, 0.25)
+function myLoop4 () {          
+   setTimeout(function () {   
+   	  ptop4 = ptop4-0.01;
+      p4.style.opacity = ptop4;     
+      if (ptop4 > 0.3) myLoop4(); 
+   }, 50)
 }
-function myLoop42 (i) {          
+function myLoop42 () {          
    setTimeout(function () {
-   	  if (ptop4 < 0){
-   	  ptop4 = ptop4+2;  
-      p4.style.top = ptop4+"px";        
-      if (--i) myLoop42(i); }
-   }, 0.25)
-}
-function myLoop5 (i) {          
-   setTimeout(function () {
-   	  ptop5 = ptop5-2;  
-      p5.style.top = ptop5+"px";        
-      if (--i && ptop5 > -400) myLoop5(i); 
-   }, 0.25)
-}
-function myLoop52 (i) {          
-   setTimeout(function () {
-   	  if (ptop5 < 0){
-   	  ptop5 = ptop5+2;  
-      p5.style.top = ptop5+"px";        
-      if (--i) myLoop52(i); }
-   }, 0.25)
+   	  if (ptop4 < 1){
+   	  ptop4 = ptop4+0.01;
+      p4.style.opacity = ptop4;
+      myLoop42(); }
+   }, 50)
 }
 
 var organization = [
@@ -159,7 +153,7 @@ var organization = [
 for (var j = 0; j < organization.length; j++) {
 	var div1 = document.createElement('div');
 	div1.setAttribute('class', "organization");
-	var h2name = document.createElement('h2');
+	var h2name = document.createElement('h3');
 	h2name.innerHTML = organization[j].name;
 	div1.appendChild(h2name);
 	//chart colors
@@ -182,7 +176,7 @@ for (var j = 0; j < organization.length; j++) {
 	  var bardata = document.createElement(TDATA);
 	  var bar = document.createElement('div');
 	  bar.setAttribute('class', colors[i]);
-	  bar.innerText = organization[j].ratings[i] + "%"; 
+	  //bar.innerText = organization[j].ratings[i] + "%"; 
 	  bar.style.height = organization[j].ratings[i] + "%";
 	  bar.style.position = "absolute";
 	  bar.style.width = "100%";
@@ -233,7 +227,7 @@ var benefactors = [
 for (var j = 0; j < benefactors.length; j++) {
 	var div1 = document.createElement('div');
 	div1.setAttribute('class', "organization");
-	var h2name = document.createElement('h2');
+	var h2name = document.createElement('h3');
 	h2name.innerHTML = benefactors[j].name;
 	div1.appendChild(h2name);
 	//chart colors
@@ -256,7 +250,7 @@ for (var j = 0; j < benefactors.length; j++) {
 	  var bardata = document.createElement(TDATA);
 	  var bar = document.createElement('div');
 	  bar.setAttribute('class', colors[i]);
-	  bar.innerText = benefactors[j].ratings[i] + "%"; 
+	  //bar.innerText = benefactors[j].ratings[i] + "%"; 
 	  bar.style.height = benefactors[j].ratings[i] + "%";
 	  bar.style.position = "absolute";
 	  bar.style.width = "100%";

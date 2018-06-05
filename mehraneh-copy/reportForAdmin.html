@@ -27,6 +27,16 @@
 		</div>
 		<div class="mainPage">
 			<div class="wrapper"></div>
+			<div id="testreg">
+				<div class="wrappers">
+					<form class="register" id="formRemove">
+						<button class="exit" onclick="popdownregister()">x</button>
+						<p class="title">امتیاز داده شده از لیست امتیازات حذف شود؟</p>
+						<div class="enter"><button class="yes" onclick="removeFromList()">بله</a></div>
+						<div class="enter"><button onclick="popdownregister()">خیر</a></div>
+					</form>
+				</div>
+			</div>
 			<div class="container">
 				<div class="filter">
 					<p>گزارش فعالیت کاربران</p>
@@ -39,18 +49,8 @@
 						<img src="images/search.png" onclick="show()">
 					</div>
 					<div class="controls">
-						<input id="beneName" type="text" placeholder="نام یکوکار"  onchange="show()">
+						<input id="beneName" type="text" placeholder="نام نیکوکار"  onchange="show()">
 						<img src="images/search.png" onclick="show()">
-					</div>
-					<h4> مرتب‌سازی بر اساس </h4>
-					<div class="controls">
-						<i class="ion-navicon"></i>
-						<select id="sortType">
-							<option value="budgetD">بودجه، نزولی</option>
-							<option value="budgetA">بودجه، صعودی</option>
-							<option value="participantsD">تعداد مشارکت کنندگان، نزولی</option>
-							<option value="participantsA">تعداد مشارکت کنندگان، صعودی</option>
-						</select>
 					</div>
 					<button class="mybutton" onclick="show()">اعمال تغییرات</button>
 				</div>
@@ -58,7 +58,7 @@
 				<div id="result">
 					<div class="report">
 						<div class="people">
-							<span class="benefactor">نیکوکار: پویان شیرزادیان</span>
+							<span class="benefactor">نیکوکار: شایان شیرزادیان</span>
 							<span class="organization">موسسه: جمعیت امام علی</span>
 							<span class="type">امتیازدهی</span>
 						</div>
@@ -71,7 +71,7 @@
 									<td><button id="button13"></button></td>
 								</tr>
 								<tr id="tr2">
-									<td id="firstTd">مسيولیت پذیری</td>
+									<td id="firstTd">مسئولیت پذیری</td>
 									<td><button id="button21"></button></td>
 									<td><button id="button22"></button></td>
 									<td><button id="button23"></button></td>
@@ -100,7 +100,7 @@
 						<div class="more">
 							<h3>خیلی کادر خوبی دارن و خیلی تجربه خوبی بود</h3>
 						</div>
-						<button class="remove" onclick="">حذف</button>
+						<button class="remove" onclick="showRemove()">حذف</button>
 					</div>
 					<div class="report">
 						<div class="people">

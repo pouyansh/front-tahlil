@@ -157,11 +157,13 @@ form button{
 	text-align: center;
 	width: 100%;
 }
+form button:hover{
+	background: rgb(36,138,206);
+}
 
 .controlsAbility{
 	text-align: right;
 	position: relative;
-	margin-bottom: 20px;
 }
 
 .controlsAbility select {
@@ -263,4 +265,8 @@ span:hover {
 	width: 100%;
 	min-height: 100%;
 	position: relative;
+}
+h5 {
+	display: inline-block;
+	padding-left: 10px;
 }

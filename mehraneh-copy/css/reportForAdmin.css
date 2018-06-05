@@ -105,7 +105,6 @@ select {
 button {
 	border: 1px solid #333333;
 	width: 100%;
-	height: 80%;
 	color: #888;
 	background: none;
 	border-radius: 50%;
@@ -119,7 +118,7 @@ button {
 	width: 25%;
 	min-width: 210px;
 	background: rgba(255,255,255,0.5);
-	height: 440px;
+	padding-bottom: 20px;
 	position: fixed;
 	right: 50px;
 	top: 160px;
@@ -180,7 +179,7 @@ button {
 	margin-top: 5px;
 	height: 45%;
 }
-.people .benefactor {
+/*.people .benefactor {
 	background: rgba(255,160,122,0.8);
 }
 .people .organization {
@@ -188,7 +187,7 @@ button {
 }
 .people .type {
 	background: rgba(240,230,140,0.8);
-}
+}*/
 .report img {
 	width: 20%;
 	display: inline-block;
@@ -276,7 +275,7 @@ button {
 	width: 100%;
 	height: 80%;
 	color: #888;
-	background: rgb(255,165,0);
+	background: rgb(211,233,158);
 	border-radius: 5px;
 	display: inline-block;
 	box-sizing: border-box;
@@ -321,7 +320,7 @@ button {
 	position: relative;
 	bottom: 10px;
 	left: 10px;
-	background: rgba(255,35,120,0.7);
+	background: #E41B17;
 	border: none;
 	color: #fdfdfd;
 	width: 10%;
@@ -330,7 +329,7 @@ button {
 	border-radius: 5px;
 }
 .remove:hover {
-	background: rgb(255,35,120);
+	opacity: 0.7;
 }
 
 
@@ -384,4 +383,81 @@ th {
 
 .proj h3{
 	text-align: center;
+}
+#result {
+	margin-top: 50px;
+}
+
+#testreg {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 1200px;
+	top: 0;
+	right: 0;
+	background: rgba(0,0,0,0.6);
+	z-index: 10;
+}
+.wrappers{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+}
+.register{
+	border-radius: 10px;
+	padding: 0px 20px 20px 20px;
+	width: 100%;
+	max-width: 400px;
+	background: #fff;
+	box-shadow: 0px 1px 5px rgba(0,0,0,.3);
+	position: relative;
+	margin: 0px auto;
+	margin-top: -500px;
+}
+.enter {
+	width: 45%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	float: right;
+}
+.enter button, .enter a{
+	padding: 13px 5px;
+	text-align: center;
+	color: #fff;
+	background: #229922;
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+}
+.register .enter .yes {
+	background: #E41B17;
+}
+.register .enter .yes:hover {
+	opacity: 0.7;
+}
+.register .enter button, .register .enter a {
+	background: rgb(119,136,153);
+}
+.register .enter button:hover, .register .enter a:hover {
+	opacity: 0.7;
+}
+.exit {
+	width: 25px;
+	text-align: center;
+	top: -10px;
+	right: -30px;
+	position: relative;
+	background: #fdfdfd;
+	border: none;
+	height: 25px;
+	font-size: 15px;
+}
+.title {
+	margin-bottom: 10px;
 }
