@@ -2,6 +2,9 @@
 	background: #777777;
 	height: 40px;
 }
+.header {
+	width: 90%;
+}
 .main {
 	background: #eeeeee;
 }
@@ -11,14 +14,14 @@ h3 {
 	margin-top: 10px;
 }
 .photo {
-	width: 70px;
+	width: 100%;
 	margin-top: 20px;
 	z-index: 5;
 	opacity: 0.6;
 }
 .photo img {
 	z-index: 3;
-	height: 70%;
+	width: 90%;
 }
 .formm {
 	width: 60%;
@@ -115,8 +118,8 @@ h2{
 }
 .topPage .texts {
 	height: 200px;
-	width: 100%;
-	margin: 50px 20px 0 0;
+	width: 90%;
+	margin: 50px 9% 0 0;
 	border-right: 1px solid #333333;
 	padding-top: 50px;
 	padding-right: 20px;

@@ -1,5 +1,5 @@
 var fields = {
-  "data": ["پیشنهاد همکاری", "امتیازدهی", "کمک مالی"]
+  "data": ["پیشنهاد همکاری", "امتیازدهی", "کمک مالی", "تغییر اطلاعات حساب کاربری"]
 }
 var sel = document.getElementById("field");
 var opt = document.createElement('option');
@@ -28,20 +28,23 @@ var hours = ["۸-۱۰", "۱۰-۱۲", "۱۲-۱۵", "۱۵-۱۷"]
 var days = ["شنبه", "یکشنبه", "دوشنبه", "سه‌شنبه", "چهارشنبه", "پنجشنبه", "جمعه"]
 var projects = {
   "projs": [
-    {"benefactor": "پویان شیرزادیان", "organization": "جمعیت امام علی", "ttype": "امتیازدهی", 
-    "disc": "خیلی کادر خوبی دارن و خیلی تجربه خوبی بود", "rate": [3,4,2,3,5], "first": 1},
-    {"benefactor": "پویان شیرزادیان", "organization": "جمعیت امام علی", "ttype": "پیشنهاد همکاری", 
-    "disc": "من میخوام بیام باهاتون کار کنم", "first": 1},
-    {"benefactor": "پویان شیرزادیان", "organization": "جمعیت امام علی", "ttype": "پیشنهاد همکاری", 
-    "disc": "بیاین با ما کار کنین", "week": [1,0,1,1,1,0,0,0,1,0,0,0,1,1,1,1,1,1,0,0,0,0,1,0,1,0,1,1], "first": 2},
-    {"benefactor": "پویان شیرزادیان", "organization": "جمعیت امام علی", "ttype": "کمک مالی", 
-    "disc": "پروژه خرید لباس برای کودکان", "payment" : 12000,"first": 1},
+    {"id":1,"benefactor": "پژمان علی‌مرادی", "organization": "جمعیت امام علی", "ttype": "امتیازدهی", 
+    "disc": "خیلی کادر خوبی دارن و خیلی تجربه خوبی بود", "rate": [3,4,2,3,5], "first": 1, "date": "1397/4/22-14:22"},
+    {"id":2,"benefactor": "پویان شیرزادیان", "organization": "جمعیت امام علی", "ttype": "پیشنهاد همکاری", 
+    "disc": "من میخوام بیام باهاتون کار کنم", "first": 1, "date": "1397/4/22-13:12"},
+    {"id":3,"benefactor": "پویان شیرزادیان", "organization": "یاوران ایتام", "ttype": "پیشنهاد همکاری", 
+    "disc": "بیاین با ما کار کنین", "week": [1,0,1,1,1,0,0,0,1,0,0,0,1,1,1,1,1,1,0,0,0,0,1,0,1,0,1,1], "first": 2, "date": "1397/4/18-04:17"},
+    {"id":4,"benefactor": "مهراد حسن زاده", "organization": "صلیب سرخ", "ttype": "کمک مالی", 
+    "disc": "پروژه خرید لباس برای کودکان", "payment" : 12000,"first": 1, "date": "1397/4/12-15:52"},
+	{"id":5,"benefactor": "مهراد حسن زاده", "organization": "", "ttype": "تغییر اطلاعات حساب کاربری", 
+    "disc": ["نام مستعار", "برنامه هفتگی", "توانایی‌ها"], "first": 3, "date": "1397/4/11-12:52"},
+	{"id":6,"benefactor": "", "organization": "حلال احمر", "ttype": "تغییر اطلاعات حساب کاربری", 
+    "disc": ["نیازمندی‌ها"], "first": 4, "date": "1397/4/۸-12:30"},
   ]
 }
 
 function show() {
 var orgname = document.getElementById("orgName").value;
-var sortType = document.getElementById("sortType").value;
 var projectfield = document.getElementById("field").value;
 var beneName = document.getElementById("beneName").value;
   var divv = document.getElementById("result");
@@ -54,25 +57,34 @@ var beneName = document.getElementById("beneName").value;
       &&(beneName=='' ||projects.projs[i].benefactor>=beneName)){
       var rep = document.createElement('div');
       rep.setAttribute('class', "report");
+	  rep.setAttribute('id', projects.projs[i].id);
       var peop = document.createElement('div');
       peop.setAttribute('class', "people");
       var benef = document.createElement('span');
       benef.setAttribute('class', "benefactor");
-      benef.innerText = projects.projs[i].benefactor;
+      benef.innerText = projects.projs[i].benefactor + "(نیکوکار)";
       var org = document.createElement('span');
       org.setAttribute('class', "organization");
-      org.innerText = projects.projs[i].organization;
+      org.innerText = projects.projs[i].organization + "(موسسه)";
       var typ = document.createElement('span');
       typ.setAttribute('class', "type");
       typ.innerText = projects.projs[i].ttype;
+	  var dat = document.createElement('span');
+      dat.setAttribute('class', "type");
+      dat.innerText = projects.projs[i].date;
       if (projects.projs[i].first==1) {
         peop.appendChild(benef);
         peop.appendChild(org);
-      } else {
+      } if (projects.projs[i].first==2) {
         peop.appendChild(org);
         peop.appendChild(benef);
+      } if (projects.projs[i].first==3) {
+        peop.appendChild(benef);
+      } if (projects.projs[i].first==4) {
+        peop.appendChild(org);
       }
       peop.appendChild(typ);
+	  peop.appendChild(dat);
       rep.appendChild(peop);
       if(projects.projs[i].ttype=="امتیازدهی") {
           var rating = document.createElement('div');
@@ -101,7 +113,7 @@ var beneName = document.getElementById("beneName").value;
           more.appendChild(hh3);
           var bbutton = document.createElement('button');
           bbutton.setAttribute('class', "remove");
-          bbutton.setAttribute('onclick', "remove(id)");
+          bbutton.setAttribute('onclick', "remove("+projects.projs[i].id+")");
           bbutton.innerText = "حذف";
           rep.appendChild(more);
           rep.appendChild(bbutton);
@@ -163,6 +175,20 @@ var beneName = document.getElementById("beneName").value;
         more.appendChild(hh3);
         rep.appendChild(more);
         divv.appendChild(rep);
+      } else if (projects.projs[i].ttype=="تغییر اطلاعات حساب کاربری") {
+        var mmore = document.createElement('div');
+        mmore.setAttribute('class', "more");
+        var ull = document.createElement('ul');
+		ull.style.listStyle= "circle";
+		for(j=0;j<projects.projs[i].disc.length;j++){
+			var lli = document.createElement('li');
+			lli.style.fontSize = "15px";
+			lli.innerHTML = projects.projs[i].disc[j];
+			ull.appendChild(lli);
+		}
+        mmore.appendChild(ull);
+        rep.appendChild(mmore);
+        divv.appendChild(rep);
       }
       else {
         var ddiv = document.createElement('div');
@@ -185,3 +211,54 @@ var beneName = document.getElementById("beneName").value;
 }
 
 show();
+
+function remove(id) {
+	var formm = document.getElementById("formRemove");
+	while(formm.hasChildNodes()){
+		formm.removeChild(formm.childNodes[0])
+	}
+	var button1 = document.createElement('button');
+	button1.setAttribute('class', "exit");
+	button1.setAttribute('onclick', "popdownregister()");
+	var txt = document.createTextNode("\u00D7");
+	button1.appendChild(txt);
+	button1.setAttribute('id', "button"+id);
+	formm.appendChild(button1);
+	var p1 = document.createElement('p');
+	p1.setAttribute('class',"title");
+	p1.innerText = "امتیاز داده شده از لیست امتیازات حذف شود؟";
+	formm.appendChild(p1);
+	var div1 = document.createElement('div');
+	div1.setAttribute('class', "enter");
+	var button1 = document.createElement('button');
+	button1.setAttribute('class', "yes");
+	button1.setAttribute('id', "buttonyes"+id);
+	button1.setAttribute('onclick', "removeFromList("+id+")");
+	button1.innerText = "بله";
+	div1.appendChild(button1);
+	formm.appendChild(div1);
+	var div1 = document.createElement('div');
+	div1.setAttribute('class', "enter");
+	var button1 = document.createElement('button');
+	button1.setAttribute('onclick', "popdownregister()");
+	button1.setAttribute('id', "buttonno"+id);
+	button1.innerText = "خیر";
+	div1.appendChild(button1);
+	formm.appendChild(div1);
+	document.getElementById("testreg").style.display = "block";
+	f("buttonno"+id);
+	f("buttonyes"+id);
+	f("button"+id);
+}
+function popdownregister(id) {
+	document.getElementById("testreg").style.display = "none";
+}
+function removeFromList(id) {
+	document.getElementById(id).style.display = "none";
+	document.getElementById("testreg").style.display = "none";
+}
+function f(id) {
+    document.getElementById(id).addEventListener("click", function(event){
+        event.preventDefault()
+    });
+}

@@ -5,7 +5,11 @@ var personalData = {
     "fieldOfEdu": "ریاضی فیزیک",
     "job": "دانشجو",
     "email": "tajdari@ce.sharif.edu",
-    "photo": "images/mahdis.jpg"
+    "photo": "images/mahdis.jpg",
+	"abilities": ["حسابداری", "آموزش", "خیاطی", "روابط عمومی"],
+	"week": [1,0,1,1,0,0,0,1,0,0,1,1,0,0,0,0,1,1,1,1,0,0,1,1,0,1,1,1],
+	"rating": [70,64,89,72,90],
+	"legends": ["صداقت","تعهد","مسئولیت پذیری","وقت شناسی","علاقه به کار"]
 }
 var titleHeader = document.getElementById("title");
 titleHeader.innerHTML = "صفحه شخصی " + personalData.name;
@@ -34,33 +38,6 @@ var semail = document.createElement('h3');
 semail.innerHTML = "پست الکترونیک: " + personalData.email;
 personal1.appendChild(semail);
 
-
-//chart data
-var chartjson = {
-  "data": [{
-    "name": "صداقت",
-    "score": 90
-  }, {
-    "name": "تعهد",
-    "score": 73
-  }, {
-    "name": "مسپولیت پذیری",
-    "score": 80
-  }, {
-    "name": "وقت شناسی",
-    "score": 89
-  }, {
-    "name": "علاقه به کار",
-    "score": 64
-  }],
-  "xtitle": "Secured Marks",
-  "ytitle": "Marks",
-  "ymax": 100,
-  "ykey": 'score',
-  "xkey": "name",
-  "prefix": "%"
-}
-
 //chart colors
 var colors = ['one', 'two', 'three', 'four', 'five'];
 
@@ -78,15 +55,14 @@ chart.appendChild(barchart);
 var barrow = document.createElement(TROW);
 
 //lets add data to the chart
-for (var i = 0; i < chartjson.data.length; i++) {
+for (var i = 0; i < personalData.rating.length; i++) {
   barrow.setAttribute('class', 'bars');
-  var prefix = chartjson.prefix || '';
   //create the bar data
   var bardata = document.createElement(TDATA);
   var bar = document.createElement('div');
   bar.setAttribute('class', colors[i]);
-  bar.innerText = chartjson.data[i][chartjson.ykey] + prefix; 
-  bar.style.height = chartjson.data[i][chartjson.ykey] + prefix;
+  bar.innerText = personalData.rating[i] + "%"; 
+  bar.style.height = personalData.rating[i] + "%";
   bar.style.position = "absolute";
   bar.style.width = "100%";
   bar.style.bottom = "0";
@@ -98,16 +74,16 @@ for (var i = 0; i < chartjson.data.length; i++) {
 var legendrow = document.createElement(TROW);
 var legend = document.createElement(TDATA);
 legend.setAttribute('class', 'legend');
-legend.setAttribute('colspan', chartjson.data.length);
+legend.setAttribute('colspan', personalData.rating.length);
 
 //add legend data
-for (var i = 0; i < chartjson.data.length; i++) {
+for (var i = 0; i < personalData.rating.length; i++) {
   var legbox = document.createElement('span');
   legbox.setAttribute('class', 'legbox');
   var barname = document.createElement('span');
   barname.setAttribute('class', colors[i] + ' xaxisname');
   var bartext = document.createElement('span');
-  bartext.innerText = chartjson.data[i][chartjson.xkey];
+  bartext.innerText = personalData.legends[i];
   legbox.appendChild(barname);
   legbox.appendChild(bartext);
   legend.appendChild(legbox);
@@ -118,16 +94,13 @@ barchart.appendChild(legendrow);
 chart.appendChild(barchart);
 document.getElementById('chart').innerHTML = chart.outerHTML;
 
-var abilities = {
-  "data": ["حسابداری", "آموزش", "خیاطی", "روابط عمومی"]
-}
 var ab = document.getElementById("abilities");
-for (var i = 0; i < abilities.data.length; i++) {
+for (var i = 0; i < personalData.abilities.length; i++) {
     var s = document.createElement('span');
     s.setAttribute('class', 'abilitySpan');
     s.style.display = "block";
     s.style.margin = "2px 20px 2px 0";
-    s.innerText = abilities.data[i];
+    s.innerText = personalData.abilities[i];
     s.value = 1;
     s.onclick = function() {
         if (this.value == 1) {
@@ -143,7 +116,6 @@ for (var i = 0; i < abilities.data.length; i++) {
 }
 
 var week = {
-    "data": [1,0,1,1,0,0,0,1,0,0,1,1,0,0,0,0,1,1,1,1,0,0,1,1,0,1,1,1],
     "day": ["شنبه", "یکشنبه", "دوشنبه" ,"سه‌شنبه", "چهارشنبه", "پنجشنبه", "جمعه"],
     "hour": [" ", "۸-۱۰", "۱۰-۱۲", "۱۲-۱۵", "۱۵-۱۷"]
 }
@@ -167,12 +139,12 @@ for (var i = 0; i < 7; i++) {
         var span = document.createElement('span');
         var id = i*4+j;
         span.id = id;
-        if (week.data[id] == 0) {
+        if (personalData.week[id] == 0) {
             span.setAttribute('class', 'free');
             span.value = 1;
             span.onclick = function() {
                 if (this.value == 1) {
-                    this.style.backgroundColor = "#C45AEC";
+                    this.style.backgroundColor = "#ff98ff";
                     this.value = 2;
                 }
                 else {
@@ -181,7 +153,7 @@ for (var i = 0; i < 7; i++) {
                 }
             };
         }
-        if (week.data[id] == 1) {
+        if (personalData.week[id] == 1) {
             span.setAttribute('class', 'busy');
         }
         d.appendChild(span);

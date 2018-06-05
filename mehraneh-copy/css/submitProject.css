@@ -432,3 +432,16 @@ span:hover {
 	min-height: 100%;
 	position: relative;
 }
+form button{
+	font-family: 'vazir';
+	cursor: pointer;
+	background: #3498db;
+	border: none;
+	color: #fff;
+	padding: 12px 5px;
+	text-align: center;
+	width: 100%;
+}
+form button:hover{
+	background: rgb(36,138,206);
+}

@@ -478,7 +478,7 @@ h2{
 	height: 300px;
 	position: absolute;
 	opacity: 0.5;
-	background: url('../images/8.jpg') fixed;
+	background: url('../images/9.jpg') fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -490,7 +490,7 @@ h2{
 	height: 300px;
 	position: absolute;
 	opacity: 0.5;
-	background: url('../images/9.jpg') fixed;
+	background: url('../images/8.jpg') fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -518,11 +518,20 @@ h2{
 
 .organization {
 	width: 21%;
-	height: 80%;
 	margin: 10% 2% 0 2%;
 	display: inline-block;
 	float: right;
 	text-align: center;
+	border-radius: 10px;
+	background: #FFE5B4;
+	padding-bottom: 30px;
+}
+.organization h3 {
+	background: #FFA62F;
+	color: #eeeeee;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	padding: 5px 0;
 }
 
 #chart {
@@ -586,31 +595,31 @@ table {
 /*Flat UI colors*/
 
 .one {
-  background: #6C2DC7;
+  background: #004bbc;
   text-align: center;
   color: #666;
 }
 
 .two {
-  background: #7F38EC;
+  background: #195dc2;
   text-align: center;
   color: #666;
 }
 
 .three {
-  background: #893BFF;
+  background: #326ec9;
   text-align: center;
   color: #666;
 }
 
 .four {
-  background: #A23BEC;
+  background: #4c81d0;
   text-align: center;
   color: #666;
 }
 
 .five {
-  background: #C45AEC;
+  background: #6693d6;
   text-align: center;
   color: #666;
 }
