@@ -350,10 +350,6 @@ table {
 	background: rgb(191,215,157); 
 }
 
-.weektable tr td .free:hover {
-	background: rgb(151,190,97); 
-}
-
 .weektable tr td .busy {
 	background: rgb(150,150,150); 
 }
