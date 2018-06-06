@@ -27,23 +27,14 @@
 		</div>
 		<div class="mainPage">
 			<div class="wrapper"></div>
-			<div class="formm" style="z-index:9">
+			<div class="formm" style="z-index: 6">
 				<form>
 					<h2>مشخصات</h2>
 					<div class="controls">
 						<input type="text" id="name" class="floatlabel" placeholder="نام موسسه">
+						<label>نام</label>
 					</div>
 					
-					<div class="controls">
-						<input type="text" id="username" class="floatlabel" placeholder="نام کاربری">
-					</div>
-					<div class="controls">
-						<input type="password" id="pass1" class="floatlabel" placeholder="کلمه عبور">
-					</div>
-					<div class="controls">
-						<input type="password" id="pass2" class="floatlabel" placeholder="تکرار کلمه عبور">
-					</div>
-
 					<div class="controls">
 						<h3>تاریخ ثبت</h3>
 						<input type="number" id="date" class="birthday" placeholder="روز">
@@ -57,25 +48,31 @@
 						<select id="city" class="floatlabel">
 							<option value="blank">شهر</option>
 						</select>
+						<label>شهر</label>
 					</div>
 
 					<div class="controls">
 						<input type="text" id="addr" class="floatlabel" placeholder="آدرس">
+						<label>آدرس</label>
 					</div>
 
 					<div class="controls">
 						<input type="email" id="email" class="floatlabel" placeholder="ایمیل">
+						<label>ایمیل</label>
 					</div>
 					
 					<div class="controls">
 						<input type="tel" id="tel" class="floatlabel" placeholder="تلفن">
+						<label>تلفن</label>
 					</div>
 					<div class="controls">
 						<input type="web" id="web" class="floatlabel" placeholder="وب سایت">
+						<label>سایت</label>
 					</div>
 
 					<div class="controls">
 						<input type="text" id="parvaneh" class="floatlabel" placeholder="پروانه فعالیت">
+						<label>پروانه فعالیت</label>
 					</div>
 					
 					<div class="controls">
@@ -87,7 +84,6 @@
 					<div class="controlsAbility">
 						<select id="candidate" class="floatlabel">
 							<option value="blank"></option>
-							
 						</select>
 	    				<button id="add" onclick="addItem()"><h3>+</h3></button>
 						<ul id="dynamiclist"></ul>
@@ -99,12 +95,7 @@
 					<textarea id="cm" class="floatlabel" placeholder="نظر شما"></textarea>
 					</div>
 					
-					<div class="controls">
-						<input type="checkbox" id="checkbox" class="checkbox">
-						<label class="checkb" for="checkbox"><span></span>قوانین را قبول دارم</label>
-					</div>
-					
-					<button>ثبت</button>
+					<button>ثبت تغییرات</button>
 				</form>
 			</div>
 		</div>
@@ -120,7 +111,7 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="js/registerOrganization.js"></script>
+	<script type="text/javascript" src="js/editProfileOrganization.js"></script>
 	<script src="js/jquery.min.js"></script>
 </body>
 </html>

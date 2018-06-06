@@ -4,7 +4,7 @@
 	<title>ثبت نام- نیکوکاران </title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<link rel="stylesheet" type="text/css" href="css/editProfileBenefactor.css">
 	<link rel="stylesheet" href="css/ionicons.min.css">
 </head>
 <body>
@@ -27,7 +27,7 @@
 		</div>
 		<div class="mainPage">
 			<div class="wrapper"></div>
-			<div class="formm">
+			<div class="formm" style="z-index:9">
 				<form>
 					<h2>مشخصات</h2>
 					<div class="controls">
@@ -43,6 +43,17 @@
 					</div>
 
 					<div class="controls">
+						<input type="text" id="username" class="floatlabel" placeholder="نام کاربری">
+					</div>
+
+					<div class="controls">
+						<input type="password" id="pass1" class="floatlabel" placeholder="کلمه عبور">
+					</div>
+					<div class="controls">
+						<input type="password" id="pass۲" class="floatlabel" placeholder="تکرار کلمه عبور">
+					</div>
+
+					<div class="controls">
 						<i class="ion-navicon"></i>
 						<select id="sex" class="floatlabel">
 							<option value="blank"> جنسیت </option>
@@ -53,10 +64,10 @@
 					</div>
 
 					<div class="controls">
-						<h3 style="display: inline; margin-left: 5px; font-size: 12px;">تاریخ تولد</h3>
-						<input type="number" id="date" class="birthday" placeholder="روز" style="width: 25%;">
-						<input type="number" id="month" class="birthday" placeholder="ماه" style="width: 25%;">
-						<input type="number" id="year" class="birthday" placeholder="سال" style="width: 25%;">
+						<h3>تاریخ تولد</h3>
+						<input type="number" id="date" class="birthday" placeholder="روز">
+						<input type="number" id="month" class="birthday" placeholder="ماه">
+						<input type="number" id="year" class="birthday" placeholder="سال">
 					</div>
 
 					<div class="controls">
@@ -192,7 +203,7 @@
 					
 					<div class="controls">
 						<input type="checkbox" id="checkbox" class="checkbox">
-						<label for="checkbox"><span></span>قوانین را قبول دارم</label>
+						<label class="checkb" style="display: inline;" for="checkbox"><span></span>قوانین را قبول دارم</label>
 					</div>
 					
 					<button>ثبت</button>

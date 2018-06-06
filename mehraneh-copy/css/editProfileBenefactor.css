@@ -21,7 +21,6 @@ body {
 	background: url('../images/back1.jpg') fixed no-repeat;
 	background-size: 1600px 1000px;
 	position: relative;
-	min-width: 300px;
 }
 
 .main .header {
@@ -217,6 +216,8 @@ input[type=text],
 input[type=email],
 input[type=tel],
 input[type=number],
+input[type=web],
+input[type=password],
 select,textarea,button{
 	padding: 18px;
 	border: 1px solid #c6c6c6;
@@ -331,9 +332,9 @@ button{
 }
 
 .controlsAbility select {
-	padding: 18px;
+	padding: 12px;
 	border: 1px solid #c6c6c6;
-	width: 85%;
+	width: 75%;
 	color: #888;
 	font-family: 'vazir';
 	border-radius: 3px;
@@ -450,4 +451,48 @@ span:hover {
 	border: none;
 	float: right;
 	display: inline-block;
+}
+#date, #month, #year {
+	width: 25%;
+	display: inline-block;
+}
+#birthday {
+	display: inline; 
+	margin-left: 5px; 
+	font-size: 12px;
+}
+
+@media only screen and (max-width: 700px) {
+	#birthday {
+		width: 100%;
+		text-align: center;
+		display: block;
+	}
+	#date, #month, #year {
+		width: 30%;
+		display: inline-block;
+	}
+}
+
+@media only screen and (max-width: 580px) {
+	.formm form {
+		width: 100%;
+	}
+}
+
+.controls .checkb {
+	position: relative;
+	color: #444444;
+	font-size: 14px;
+	display: inline;
+	float: right;
+	margin-right: 30px;
+	margin-bottom: 40px;
+}
+.controls label, .educontrols label{
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	color: #cccccc;
+	font-size: 12px;
 }

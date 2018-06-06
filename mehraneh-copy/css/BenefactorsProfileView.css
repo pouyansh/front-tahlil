@@ -29,7 +29,7 @@
 }
 
 .mainPage .container .chartContainer {
-	width: 90%;
+	width: 99%;
 	display: block;
 	position: relative;
 	margin: 10px auto; 
@@ -44,7 +44,6 @@
 table {
   width: 100%;
   margin-top: 20px;
-  min-width: 415px;
 }
 
 .charttitle {
@@ -207,4 +206,34 @@ textarea {
 
 .subreq:hover {
 	background: rgb(33,126,188);
+}
+@media only screen and (max-width: 530px) {
+	.mainPage .container .photo {
+		width: 70%;
+		margin-left: 15%;
+	}
+	.mainPage .container .personal h3 {
+		font-size: 12px;
+	}
+	h2 {
+		font-size: 14px;
+	}
+	table {
+		font-size: 10px;
+	}
+	#abilities span {
+		width: 80%;
+		display: inline-block;
+	}
+
+}
+@media only screen and (max-width: 400px) {
+	.bars .legend {
+		display: none;
+		width: 0;
+	}
+	.bars td {
+		width: 19%;
+	}
+
 }

@@ -637,3 +637,31 @@ table {
 .organization h2 {
 	font-size: 18px;
 }
+
+@media only screen and (max-width: 900px) {
+	#cc #c1 p{
+		width: 80%;
+		font-size: 14px;
+	}
+	#cc #c3 .organization h3, #cc #c5 .organization h3 {
+		font-size: 14px;
+	}
+	#cc #c3 .organization .projects, #cc #c5 .organization .projects {
+		font-size: 12px;
+		width: 100%;
+	}
+	#cc #c3 .organization .projects ul, #cc #c5 .organization .projects ul{
+		font-size: 10px;
+		padding: 0;
+	}
+}
+@media only screen and (max-width: 680px) {
+	#cc #c2 p, #cc #c4 p{
+		width: 90%;
+		margin-right: 5%;
+		font-size: 14px;
+	}
+	#cc #c3 .organization .projects ul , #cc #c5 .organization .projects ul{
+		list-style: none;
+	}
+}

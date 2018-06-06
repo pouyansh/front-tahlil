@@ -20,15 +20,32 @@
 			<div class="wrapper"></div>
 			<h2>درگاه پرداخت اینترنتی</h2>
 			
-			
+			<div class="topPage">
+				<div class="texts">
+					<div class="topcontrols" id="name"> 
+						<label for="receivername">نام پذیرنده: </label>
+					</div>
+					<div class="topcontrols" id="payment">
+						<label for="price">مبلغ (تومان): </label>
+					</div>
+					<div class="topcontrols" id="site">
+						<label for="site">سایت پذیرنده: </label>
+					</div>
+				</div>
+				<div class="photo">
+					<img src="images/bank.png">
+				</div>
+			</div>
 			<div class="formm">
 				<form>
 					<div class="controls">
 						<label for="t1"> شماره کارت </label>
-						<input class="num" type="text" id="fourth" maxlength="4" >
-						<h3>-</h3><input class="num" type="text" id="third" maxlength="4" onkeyup="movetoNext(this, 'fourth')">
-						<h3>-</h3><input class="num" type="text" id="second" maxlength="4" onkeyup="movetoNext(this, 'third')">
-						<h3>-</h3><input class="num" type="text" id="first" maxlength="4" onkeyup="movetoNext(this, 'second')">
+						<div class="cont">
+							<input class="num" type="text" id="fourth" maxlength="4" >
+							<h3>-</h3><input class="num" type="text" id="third" maxlength="4" onkeyup="movetoNext(this, 'fourth')">
+							<h3>-</h3><input class="num" type="text" id="second" maxlength="4" onkeyup="movetoNext(this, 'third')">
+							<h3>-</h3><input class="num" type="text" id="first" maxlength="4" onkeyup="movetoNext(this, 'second')">
+						</div>
 					</div>
 					
 					<div class="controls">
@@ -54,22 +71,7 @@
 				</form>
 				
 			</div>
-			<div class="topPage">
-				<div class="texts">
-					<div class="topcontrols" id="name"> 
-						<label for="receivername">نام پذیرنده: </label>
-					</div>
-					<div class="topcontrols" id="payment">
-						<label for="price">مبلغ (تومان): </label>
-					</div>
-					<div class="topcontrols" id="site">
-						<label for="price">سایت پذیرنده: </label>
-					</div>
-				</div>
-				<div class="photo">
-					<img src="images/bank.png">
-				</div>
-			</div>
+			
 			<!--<div class="photo">
 				<img src="images/bank.png">
 			</div>-->
