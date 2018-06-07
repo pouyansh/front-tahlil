@@ -96,31 +96,31 @@ table {
 /*Flat UI colors*/
 
 .one {
-  background: #6C2DC7;
+  background: rgb(0,49,162);
   text-align: center;
   color: #666;
 }
 
 .two {
-  background: #7F38EC;
+  background: rgb(4,80,255);
   text-align: center;
   color: #666;
 }
 
 .three {
-  background: #893BFF;
+  background: rgb(15,157,242);
   text-align: center;
   color: #666;
 }
 
 .four {
-  background: #A23BEC;
+  background: rgb(9,201,249);
   text-align: center;
   color: #666;
 }
 
 .five {
-  background: #C45AEC;
+  background: rgb(151,208,255);
   text-align: center;
   color: #666;
 }
@@ -140,7 +140,7 @@ table {
 }
 
 #abilities span:hover {
-	background: rgba(196,90,236,0.6);
+	background: rgb(15,157,242);
 }
 
 #weeklyfreetime {

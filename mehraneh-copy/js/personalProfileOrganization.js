@@ -12,7 +12,8 @@ var personalData = {
   "projectsdone": [ "کمک به زلزله زدگان", "برگزاری افطاری در مناطق محروم", "خرید جهیزیه"],
   "abilities" : {"data": ["حسابداری", "آموزش", "خیاطی", "روابط عمومی"]},
   "rating": [70,80,30,65,24],
-  "data": ["صداقت","تعهد","مسپولیت پذیری","وقت شناسی","علاقه به کار"]
+  "data": ["صداقت","تعهد","مسپولیت پذیری","وقت شناسی","علاقه به کار"],
+  "more": "بنیاد خیریه نور احسان، مؤسس­ه ای غیرانتفاعی ست که در سال 1379 با هدف حفظ سلامت و پایداری نهاد خانواده­ های نیازمند تاسیس شد. این مؤسسه، از سوی هیچ نهاد دولتی حمایت نمی­ شود و مخارج مددجویان خود را تنها از طریق کمک­های مردمی تامین می­ کند.بنیاد خیریه نور احسان، خانواده های بی سرپرست، بدسرپرست، بیمارسرپرست، زنان سرپرست خانوار، سالمندان نیازمند، مبتلایان به بیماری های خاص و نادر، افراد آسیب دیده از زلزله و قربانیان اسیدپاشی را تحت پوشش دارد."
 }
 var photo = document.getElementById("photo");
 var im = document.createElement('img');
@@ -42,6 +43,9 @@ var sphone=document.createElement('h3');
 sphone.innerHTML= "تلفن تماس: "+personalData.phoneno;
 personal1.appendChild(sphone);
 
+var h = document.createElement('p');
+h.innerText = personalData.more;
+document.getElementById("more").appendChild(h);
 
 //chart colors
 var colors = ['one', 'two', 'three', 'four', 'five'];
@@ -120,21 +124,6 @@ for(var i=0; i<personalData.projectsdone.length; i++){
 	ss.value=1;
 	projectsdonee.appendChild(ss);
 }
-	
-
-
-
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
 
 function addItem(){
     var ul = document.getElementById("dynamiclist");

@@ -104,7 +104,7 @@ for (var i = 0; i < personalData.abilities.length; i++) {
     s.value = 1;
     s.onclick = function() {
         if (this.value == 1) {
-            this.style.backgroundColor = "rgba(162,59,236,0.6)";
+            this.style.backgroundColor = "rgb(4,80,255)";
             this.value = 2;
         }
         else {
@@ -144,7 +144,7 @@ for (var i = 0; i < 7; i++) {
             span.value = 1;
             span.onclick = function() {
                 if (this.value == 1) {
-                    this.style.backgroundColor = "#ff98ff";
+                    this.style.backgroundColor = "rgb(15,157,242)";
                     this.value = 2;
                 }
                 else {

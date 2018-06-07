@@ -1,14 +1,4 @@
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-var close = document.getElementsByClassName("close");
+
 
 function addItem(){
     var ul = document.getElementById("dynamiclist");
@@ -17,6 +7,10 @@ function addItem(){
     var span = document.createElement("SPAN");
     var txt = document.createTextNode("\u00D7");
     span.className = "close";
+    span.onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+        }
     span.appendChild(txt);
     li.appendChild(span);
     li.setAttribute('id',candidate);
@@ -24,13 +18,6 @@ function addItem(){
     ul.appendChild(li);
     
     document.getElementById("candidate").value = "";
-
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
-            var div = this.parentElement;
-            div.style.display = "none";
-        }
-    }
 }
 
 function eduChanged() {
