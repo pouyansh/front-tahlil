@@ -31,7 +31,7 @@ var projects = {
     {"id":1,"benefactor": "پژمان علی‌مرادی", "organization": "جمعیت امام علی", "ttype": "امتیازدهی", 
     "disc": "خیلی کادر خوبی دارن و خیلی تجربه خوبی بود", "rate": [3,4,2,3,5], "first": 1, "date": "1397/4/22-14:22"},
     {"id":2,"benefactor": "پویان شیرزادیان", "organization": "جمعیت امام علی", "ttype": "پیشنهاد همکاری", 
-    "disc": "من میخوام بیام باهاتون کار کنم", "first": 1, "date": "1397/4/22-13:12"},
+    "disc": "من میخوام بیام باهاتون کار کنم","week": [1,0,1,1,1,0,0,0,1,0,0,0,1,1,1,1,1,1,0,0,0,0,1,0,1,0,1,1], "first": 1, "date": "1397/4/22-13:12"},
     {"id":3,"benefactor": "پویان شیرزادیان", "organization": "یاوران ایتام", "ttype": "پیشنهاد همکاری", 
     "disc": "بیاین با ما کار کنین", "week": [1,0,1,1,1,0,0,0,1,0,0,0,1,1,1,1,1,1,0,0,0,0,1,0,1,0,1,1], "first": 2, "date": "1397/4/18-04:17"},
     {"id":4,"benefactor": "مهراد حسن زاده", "organization": "صلیب سرخ", "ttype": "کمک مالی", 
@@ -120,6 +120,45 @@ var beneName = document.getElementById("beneName").value;
           divv.appendChild(rep);
       }   
       else if (projects.projs[i].ttype=="پیشنهاد همکاری" && projects.projs[i].first==1) {
+        var wweek = document.createElement('div');
+        wweek.setAttribute('class', "week");
+        var ttable = document.createElement('table');
+        ttable.setAttribute('class', "tab");
+        var tthead = document.createElement('thead');
+        var tth = document.createElement('th');
+        tth.setAttribute('class', "firstCol");
+        tth.innerText = "";
+        tthead.appendChild(tth);
+        for (var j = 0; j < 4; j++) {
+          var tth = document.createElement('th');
+          tth.innerText = hours[j];
+          tthead.appendChild(tth);
+        }
+        ttable.appendChild(tthead);
+        var ttbody = document.createElement('tbody');
+        for (var j = 0; j <7; j++) {
+          var ttr = document.createElement('tr');
+          var ttd = document.createElement('td');
+          ttd.setAttribute('class', "firstCol");
+          ttd.innerText = days[j];
+          ttr.appendChild(ttd);
+          for (var k = 0; k < 4; k++) {
+            var ttd = document.createElement('td');
+            ttd.setAttribute('class', "otherCol");
+            ttd.innerText = "";
+            if (projects.projs[i].week[4*j+k]==1) {
+              ttd.style.backgroundColor = "rgb(211,233,158)";
+            } else {
+              ttd.style.backgroundColor = "#999999";
+            }
+            ttr.appendChild(ttd);
+          }
+          ttbody.appendChild(ttr);
+        }
+        ttable.appendChild(ttbody);
+        wweek.appendChild(ttable);
+        rep.appendChild(wweek);
+
         var mmore = document.createElement('div');
         mmore.setAttribute('class', "more");
         var hh3 = document.createElement('h3');

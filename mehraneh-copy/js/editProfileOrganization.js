@@ -79,7 +79,9 @@ var personalData ={
     "site": "aytam.com",
     "abilities": ["آموزش", "روابط عمومی"],
     "more": "",
-    "photo": "images/1.png"
+    "photo": "images/1.png",
+    "openAtFriday": false,
+    "openAtThursday": true
 }
 document.getElementById("name").value = personalData.name;
 document.getElementById("web").value = personalData.site;
@@ -92,6 +94,8 @@ document.getElementById("addr").value = personalData.addr;
 document.getElementById("email").value = personalData.email;
 document.getElementById("tel").value = personalData.tel;
 document.getElementById("cm").value = personalData.more;
+document.getElementById("checkboxfriday").checked = personalData.openAtFriday;
+document.getElementById("checkboxthursday").checked = personalData.openAtThursday;
 var ul = document.getElementById("dynamiclist");
 for(i=0;i<personalData.abilities.length;i++) {
     var li = document.createElement("li");

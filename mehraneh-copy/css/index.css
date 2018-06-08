@@ -679,3 +679,92 @@ table {
 		list-style: none;
 	}
 }
+
+.main .nav {
+	z-index: 60;
+	position: fixed;
+	width: 100%;
+	margin: 0px 0;
+	display: block;
+	background: #1E90FF;
+	opacity: 0.8;
+	height: 35px;
+	white-space: cull;
+	color: #eeeeee;
+	font-size: 12px;
+}
+.main .nav ul {
+	display: flex;
+	padding: 0;
+}
+.main .nav ul li {
+	display: inline-flex;
+	list-style: none;
+	text-align: center;
+	height: 35px;
+	margin: 0 0;
+	width: 150px;
+	text-align: center;
+	float: none;
+	position: relative;
+	padding: 0;
+	border-radius: 5px;
+}
+.main .nav ul li:hover {
+	background: #00008B;
+}
+
+.main .nav ul li a {
+	text-decoration: none;
+	display: inline-block;
+	margin: 5px 0;
+	color: #eeeeee;
+	text-align: center;
+	width: 100%;
+	padding: 0;
+}
+.main .nav ul li h3{
+	display: inline;
+}
+.main .nav ul li .innermenu, .main .nav ul li .innermenu1 {
+	display: flex;
+	list-style: none;
+	position: absolute;
+	top: 40px;
+	right: 0px;
+	width: 350px;
+	background: #1E90FF;
+	padding: 0;
+	opacity: 0;
+	margin-top: 20px;
+	border-radius: 5px;
+	visibility: hidden;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+}
+.main .nav ul li .innermenu {
+	width: 250px;
+}
+.main .nav ul li:hover ol, .main .nav ul li:hover ol:hover, .main .nav ul li ol:hover{
+	opacity: 1;
+	visibility: visible;
+	margin-top: 0;
+}
+.main .nav ul li .innermenu li{
+	display: block;
+	font-size: 10px;
+	width: 50%;
+}
+.main .nav ul li .innermenu1 li{
+	display: block;
+	font-size: 10px;
+	width: 33.33%;
+}
+.main .nav ul li .innermenu li a {
+	text-decoration: none;
+	display: inline-block;
+	color: #eeeeee;
+	text-align: center;
+}

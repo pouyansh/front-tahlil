@@ -75,6 +75,26 @@ var minimumtotalrating = document.getElementById("minimumtotalrating").value;
 
     var divcost = document.createElement('div');
     divcost.setAttribute('class', "cost");
+    var value1 = document.createElement('input');
+    value1.setAttribute('type', "number");
+    value1.setAttribute('placeholder', "مبلغ مورد نظر");
+    value1.setAttribute('id', "value1");
+    divcost.appendChild(value1);
+    var h3disc = document.createElement('a');
+    h3disc.style.textDecoration = "none";
+    h3disc.style.backgroundColor = "rgb(61, 177, 58)";
+    h3disc.style.width = "60px";
+    h3disc.style.fontSize = "12px";
+    h3disc.style.display = "inline-block";
+    h3disc.style.color = "#eeeeee";
+    h3disc.style.borderRadius = "5px";
+    h3disc.innerHTML = "پرداخت";
+    h3disc.setAttribute('href', "bank.html");
+    divcost.appendChild(h3disc);
+    divProject.appendChild(divcost);
+
+    var divcost = document.createElement('div');
+    divcost.setAttribute('class', "cost");
     var h3disc = document.createElement('h3');
     h3disc.innerHTML = "مبلغ مورد نیاز";
     divcost.appendChild(h3disc);

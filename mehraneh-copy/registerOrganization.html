@@ -15,6 +15,37 @@
 		</div>
 		<div class="mainPage">
 			<div class="wrapper"></div>
+			<div id="test">
+				<div class="wrappers">
+			
+					<form class="login">
+						<button id="button2" class="exit1" onclick="popdown()">x</button>
+						<p class="title">ورود</p>
+						<p>
+							<input type="text" placeholder="نام کاربری" class="login-text">
+							<i class="ion-person"></i>
+						</p>
+						<p>
+							<input type="password" placeholder="رمز عبور" class="login-text">
+							<i class="ion-ios-locked"></i>
+						</p>
+						<div class="enter"><button>ورود</button></div>
+						<button class="forget">فراموشی رمز عبور</button>
+						
+						<p> اگر هنوز حساب کاربری برای خود ایجاد نکرده‌اید، </p> <button class="reg" id="buttonreg" onclick="popupregister()">ثبت نام</button> <p>کنید</p>
+					</form>
+				</div>
+			</div>
+			<div id="testreg">
+				<div class="wrappers">
+					<form class="register">
+						<button id="buttonreg2" class="exit" onclick="popdownregister()">x</button>
+						<p class="title">ثبت نام</p>
+						<div class="enter"><a href="registerBenefactor.html">نیکوکار</a></div>
+						<div class="enter"><a href="registerOrganization.html">موسسه</a></div>
+					</form>
+				</div>
+			</div>
 			<div class="nav" id="nav"></div>
 			<div class="formm" style="z-index:9">
 				<form>
@@ -87,6 +118,16 @@
 					<div class="controls">
 					<textarea id="cm" class="floatlabel" placeholder="نظر شما"></textarea>
 					</div>
+
+					<div class="controls">
+						<input type="checkbox" id="checkboxthursday" class="checkbox">
+						<label class="checkb" style="display: inline;" for="checkboxthursday"><span></span>پنجشنبه‌ها نیز موسسه فعالیت می‌کند.</label>
+					</div>
+
+					<div class="controls">
+						<input type="checkbox" id="checkboxfriday" class="checkbox">
+						<label class="checkb" style="display: inline;" for="checkboxfriday"><span></span>جمعه‌ها نیز موسسه فعالیت می‌کند.</label>
+					</div>
 					
 					<div class="controls">
 						<input type="checkbox" id="checkbox" class="checkbox">
@@ -110,6 +151,7 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="js/registerOrganization.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	<script src="js/jquery.min.js"></script>
 </body>
 </html>

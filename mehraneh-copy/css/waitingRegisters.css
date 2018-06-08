@@ -7,7 +7,7 @@
 	width: 80%;
 	z-index: 3;
 	box-sizing: border-box;
-	margin: 50px auto;
+	margin: 150px auto;
 	position: relative;
 }
 
@@ -92,14 +92,16 @@ select {
 }
 
 button {
-	border: 1px solid #333333;
-	width: 100%;
-	height: 80%;
-	color: #888;
+	width: 80%;
+	height: 30px;
+	color: #eeeeee;
 	background: none;
-	border-radius: 50%;
+	border-radius: 5px;
 	display: inline-block;
 	box-sizing: border-box;
+}
+button:hover {
+	opacity: 0.8;
 }
 
 input[type=number] {
@@ -182,7 +184,7 @@ input[type=number]::-webkit-outer-spin-button {
 	width: 80%;
 	margin-right: 10%;
 	float: right;
-	margin-bottom: 20px;
+	padding: 20px 0;
 	border-bottom: 1px solid #777777;
 }
 .project .specifications {
@@ -293,6 +295,9 @@ input[type=number]::-webkit-outer-spin-button {
 	}
 	#result {
 		float: none;
+		width: 100%;
+	}
+	.main .container {
 		width: 100%;
 	}
 }

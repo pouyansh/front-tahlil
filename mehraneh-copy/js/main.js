@@ -202,7 +202,7 @@ else if (isLogedIn && personal.isBen) {
 	ul1.appendChild(li1);
 	div1.appendChild(ul1);
 }
-else {
+else if (isLogedIn) {
 	var li2 = document.createElement('li');
 	var a1 = document.createElement('a');
 	a1.innerText = "جستجو";
@@ -262,7 +262,7 @@ else {
 	var li1 = document.createElement('li');
 	var a1 = document.createElement('a');
 	a1.setAttribute('href', "reportsForAdmin.html");
-	a1.innerText = "لیست کاربران در انتظار تایید مدیر";
+	a1.innerText = "لیست کاربران در انتظار تایید ";
 	li1.appendChild(a1);
 	ul1.appendChild(li1);
 	div1.appendChild(ul1);
