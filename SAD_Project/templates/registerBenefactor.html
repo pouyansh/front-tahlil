@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="fa" dir="rtl">
+<head>
+	<title>ثبت نام- نیکوکاران </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href={% static "css/style.css" %}>
+	<link rel="stylesheet" type="text/css" href={% static "css/editProfileBenefactor.css" %}>
+	<link rel="stylesheet" href={% static "css/ionicons.min.css" %}>
+</head>
+<body>
+    {{ form.errors }}
+	<div class="main">
+		<div class="header">
+			<div class="topmenu">
+				
+			</div>
+		</div>
+		<div class="mainPage">
+			<div class="wrapper"></div>
+			<div class="nav" id="nav"></div>
+			<div class="formm" style="z-index:9">
+				<form method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					<h2>مشخصات</h2>
+					<div class="controls">
+						<input type="text" id="name" class="floatlabel" placeholder="نام" name="name">
+					</div>
+
+					<div class="controls">
+						<input type="text" id="lastname" class="floatlabel" placeholder="نام خانوادگی", name="surname">
+					</div>
+					
+					<div class="controls">
+						<input type="text" id="nickname" class="floatlabel" placeholder="نام مستعار", name="nickname">
+					</div>
+
+					<div class="controls">
+						<input type="text" id="username" class="floatlabel" placeholder="نام کاربری", name="username">
+					</div>
+
+					<div class="controls">
+						<input type="password" id="pass1" class="floatlabel" placeholder="کلمه عبور", name="password">
+					</div>
+					<div class="controls">
+						<input type="password" id="pass۲" class="floatlabel" placeholder="تکرار کلمه عبور", name="rpassword">
+					</div>
+
+					<div class="controls">
+						<i class="ion-navicon"></i>
+						<select id="sex" class="floatlabel" name="sex">
+							<option value="blank"> جنسیت </option>
+							<option value="male">مرد</option>
+							<option value="female">زن</option>
+							<option value="other">سایر</option>
+						</select>
+					</div>
+
+					<div class="controls">
+						<h3>تاریخ تولد</h3>
+						<input type="number" id="date" class="birthday" placeholder="روز" name="birthDate">
+						<input type="number" id="month" class="birthday" placeholder="ماه" name="birthMonth">
+						<input type="number" id="year" class="birthday" placeholder="سال" name="birthYear">
+					</div>
+
+					<div class="controls">
+						<i class="ion-navicon"></i>
+						<select id="education" class="floatlabel" onchange="eduChanged()" name="education">
+							<option value="blank"> میزان تحصیلات </option>
+							<option value="nothing">-</option>
+							<option value="diploma">دیپلم و فوق دیپلم</option>
+							<option value="bachelor">لیسانس</option>
+							<option value="master">فوق لیسانس</option>
+							<option value="phd">دکتری و بالاتر</option>
+						</select>
+					</div>
+
+					<div class="educontrols">
+						<input type="text" id="fieldOfEducation" class="floatlabel" placeholder="رشته تحصیلی" name="major">
+					</div>
+					
+					<div class="controls">
+						<input type="number" id="nationalId" class="NID" placeholder="کد ملی" name="nid">
+					</div>
+
+					<div class="controls">
+						<i class="ion-navicon"></i>
+						<select id="city" class="floatlabel" name="city">
+							<option value="blank">شهر محل سکونت</option>
+						</select>
+					</div>
+
+					<div class="controls">
+						<input type="text" id="addr" class="floatlabel" placeholder="آدرس" name="address">
+					</div>
+
+					<div class="controls">
+						<input type="email" id="email" class="floatlabel" placeholder="ایمیل" name="email">
+					</div>
+					
+					<div class="controls">
+						<input type="tel" id="tel" class="floatlabel" placeholder="تلفن" name="phone">
+					</div>
+					
+					<div class="controls">
+						<h4 style="display: inline; margin-left: 10px;"> عکس </h4>
+						<input type="file" id="photo" name="photo">
+					</div>
+
+					<h2> توانایی‌ها </h2>
+					<div class="controlsAbility">
+						<select id="candidate" class="floatlabel" name="ability">
+							<select multiple>
+								<option value="volvo" name="driving">رانندگی</option>
+								<option value="saab" name="pr">روابط عمومی</option>
+								<option value="opel" name="accounting">حسابداری</option>
+								<option value="audi" name="teaching">آموزش</option>
+						</select>
+					</div>
+					
+					<h2>بیشتر...</h2>
+					<div class="controls">
+					<textarea id="cm" class="floatlabel" placeholder="نظر شما" name="more"></textarea>
+					</div>
+					
+					<div class="controls">
+						<input type="checkbox" id="checkbox" class="checkbox" name="terms">
+						<label class="checkb" style="display: inline;" for="checkbox"><span></span><a href="terms.html" style="text-decoration: none; color: #009966">قوانین</a> را قبول دارم</label>
+					</div>
+					
+					<button>ثبت</button>
+				</form>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="addr">
+					<h4> خیابان آزادی، بلوار اکبری، خیابان قاسمی، پلاک ۳۶، واحد ۲ </h4>
+					<h4>تلفن: ۰۲۱۸۸۳۴۲۸۹۱</h4>
+				</div>
+			</div>
+			<div class="copy">
+				<h4>کپی‌رایت رعایت شود.</h4>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src={% static "js/registerBenefactor.js" %}></script>
+	<script src={% static "js/jquery.min.js" %}></script>
+</body>
+</html>
